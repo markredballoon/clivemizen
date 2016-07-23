@@ -1,0 +1,26 @@
+# FAQs Plugin shortcode options
+
+cat="" (default: "" )
+Categories to be displayed. Found by Category names. Leave blank to get all Categories.
+
+exclude="" (default: "" )
+ID of any pages to be excluded.
+
+title="hide/show" (default: "hide" )
+Show or hide the category names. Defaults to hide.
+
+show_question="open/close/first" (default: "close" )
+Whether the first questions should be open or closed. First means that only the first question in each category will be open. Defaults to closed. Does nothing if collapse is set to category or none.
+
+show_category="open/close/first" (default: "close" )
+Whether the first faq section should be open or closed. First means that only the first category will be open. Defaults to closed. Does nothing if collapse is set to question or none.
+
+collapsable="question/category/both/none"
+Which sections should be collapsable. Question means only the questions are collapsable. Category means only the categories are collapsable. Both means both are collapsable. None means neither are collapsable. Defaults to question.
+If using both or category make sure that the title is being shown or change the styles so that there is a way to open the category.
+
+icon="none/arrow/plus"
+Image that gets used for the close icon. Defaults to none. Can be custom value, this Variable gets output as a class on the faq-section element.
+
+iconalt="arrow/plus/none"
+Icon used for the questions. This can be set differently to the categories with this variable. Class that gets added to the faq elements. blank by default, which means it will have the same style as the categories. 'none' will clear the icon. Over-rides the icon variable if collapsable is set to question.

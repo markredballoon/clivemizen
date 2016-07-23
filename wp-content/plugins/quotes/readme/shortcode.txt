@@ -1,0 +1,4 @@
+# Quotes shortcode options
+
+id="[quote id]" (default:blank)
+The id of the citation being used.

@@ -1,0 +1,7 @@
+# Shortcode options for cta Plugin
+
+parent="[parent id]" (default:blank)
+The id of the parent for the calls to action. The plugin will add all children of the parent as a call to action. Required
+
+exclude="[cta id]" (default:blank)
+A list of calls to action that should be excluded and not brought in.

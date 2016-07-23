@@ -1,0 +1,113 @@
+/*
+ * WordPress Ajax Load More
+ * https://github.com/dcooney/wordpress-ajax-load-more
+ *
+ * Copyright 2014 Connekt Media - http://cnkt.ca/ajax-load-more/
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Author: Darren Cooney
+ * Twitter: @KaptonKaos
+*/
+
+button#load-more{	
+   width:auto;
+   font-size:17px !important;
+   line-height: 27px;
+   font-weight: bold;
+   border: none;
+   display: inline-block;		
+   position: relative;
+   padding:0 20px;
+   color:#009371;
+   text-align: center;	
+   height: 36px;
+   text-decoration: none !important;
+   border: none;
+   background: transparent;
+   -webkit-appearance: caret;
+}
+	button#load-more:hover{
+		color: #DE1F39;
+		text-decoration: none;
+	}
+	button#load-more:active{
+		color: #222933;
+		text-decoration: none !important;
+	}
+
+button#load-more:after{
+  content:'';
+  width: 12px;
+  height: 10px;
+  background: url(../../images/icon-more.png) transparent top center no-repeat;
+  background-size: 12px 30px;
+  display: block;
+  position: relative;
+  left: calc(50% - 6px);
+}
+button#load-more:hover:after{
+  background-position: 0 -10px;
+}
+	
+	/* Loading */
+    button#load-more.loading{
+    	padding-left: 42px;
+    }
+    /* Loaded / Done */
+	button#load-more.done{
+		cursor: default;
+        opacity: 0.2;
+        filter: alpha(opacity=20); 
+		background-color: transparent; 
+    }
+
+  button#load-more.done:hover{
+    color: #009371;
+  }
+  button#load-more.done:hover:after{
+    background-position: 0 0;
+  }
+
+    
+    /* Loading Icon */
+	button #load-more:before,
+	button#load-more.done:before{                
+		background: none;
+		width: 0;
+	}
+
+	
+	button#load-more.loading:before {
+      background: #fff url(../img/ajax-loader.gif) no-repeat center center;
+      width: 30px;
+      height: 30px;
+      margin: 5px;		
+      -webkit-border-radius:3px;
+      -moz-border-radius:3px;
+      border-radius:3px;
+      display: inline-block;
+      z-index: 100;
+      content: '';
+      position: absolute;
+      left: 0;
+      overflow: hidden;
+      -webkit-transition: width 0.5s ease-in-out;
+      -moz-transition: width 0.5s ease-in-out;
+      transition: width 0.5s ease-in-out;
+	}
+	
+.load-more-btn-wrap{
+	text-align:center;
+	padding:10px 10px 30px;
+	overflow: hidden;
+	display: block;
+}
+
+.loading-caret {
+	display: none;
+	width: 12px; height: 10px; 
+	background: url(../../images/icon-more.png) transparent top center no-repeat;
+	background-size: 12px 30px;
+	margin: 0 auto;
+}

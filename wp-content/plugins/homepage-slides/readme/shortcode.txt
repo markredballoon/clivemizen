@@ -1,0 +1,25 @@
+# Homepage Slides Plugin Shortcodes.
+
+carousel_class="[css class name]" (default: blank)
+CSS class that gets added to the carousel. Similar carousels should have the same class attached to them. Used for styling carousels.
+
+carousel_id="[unique id]" (default: carousel_[number] )
+ID that gets added to the carousel. If no ID is set then it will add an id of "carousel_[number]" where the number is an incremental value. Used for carousels that require a unique ID.
+
+interval="[time in ms]" (default: 5000)
+Sets the interval between slide transitions. The value is set in milliseconds. By defualt this value is set to 5000 (5 seconds).
+
+parent="[parent id]" (default: blank)
+Searches for slides that are children to the parent page (selected by the ID). Use this if there are multiple carousels on the site with different outputs.
+
+indicators="show/hide" (default: "show")
+Shows the indicators for the carousel.
+
+arrows="show/hide" (default: "show")
+Shows the left and right arrows for the carousel.
+
+exclude="[slide id]" (default: blank)
+Excludes a slide from the carousel by the slide id.
+
+swipe="false/true" (default: "true")
+Turns wipe effect on carousel on or off.

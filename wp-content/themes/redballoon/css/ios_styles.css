@@ -1,0 +1,15 @@
+.postcode-search form .search-postcode{
+	text-indent: -10px;
+}
+.postcode-search form.postcode-search-sm .search-postcode{
+	margin-left: 6px;
+}
+
+form.postcode-search-md .search-postcode{
+	margin-left:6px;
+	text-indent: -10px;
+}
+
+.navbar-toggle .icon-stores{
+	-webkit-transform: translate3d(0,0,0);
+}
