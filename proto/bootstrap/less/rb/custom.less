@@ -37,7 +37,7 @@ body{
 
 header{
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 }
 
 #main{
@@ -60,11 +60,80 @@ a{
 	/* Adds opacity, background-color, and color transitions. The base transition speed is 0.5s */
 	.fadeTransition();
 }
+
+section{
+	img{
+		width: 100%;
+		height: auto;
+		margin-bottom: @pbv;
+	}
+}
 /*
 === === === === === === ===
 _Reused_classes
 === === === === === === ===
 */
+.see-more(@see-more-color:#fff; @see-more-img:url(../../../images/double-chevron-right.svg);){
+	float: right;
+	padding-right: 24px;
+	color: @see-more-color;
+	text-transform: capitalize;
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-image: @see-more-img;
+	&:hover, &:active, &:focus{
+		color: @see-more-color;
+		text-decoration: underline;
+	}
+}
+.see-more-white{
+	.see-more();
+}
+.see-more-green{
+	.see-more(@cajm-green, url(../../../images/double-chevron-right-green.svg));
+}
+
+.button{
+	display: block;
+	width: 132px;
+	border: 2px solid @cajm-blue-dark;
+	color: @cajm-blue-dark;
+	padding: 8px 12px 8px;
+	font-size: 16px;
+	line-height: 1;
+	text-align: center;
+	&:hover{
+		background-color: @cajm-blue-dark;
+		color: #fff;
+	}
+}
+
+article.in-index-large{
+	width: 100%;
+	border: 2px solid @cajm-blue-dark;
+	padding: 16px 24px;
+	margin-bottom: 24px;
+	header{
+		.clearfix();
+		display: block;
+		vertical-align: bottom;
+		h3{
+			float: left;
+		}
+		time{
+			float: right;
+			font-weight: bold;
+		}
+	}
+	footer{
+		.clearfix();
+		display: block;
+		.button{
+			float: right;
+		}
+	}
+}
 
 /*
 === === === === === === ===
@@ -72,6 +141,27 @@ _page_specific
 === === === === === === ===
 */
 
+// Homepage sections
+main section{
+	padding-top: 36px;
+	padding-bottom: 44px;
+}
+
+section.home-gallery{
+	background-color: @cajm-blue-grey;
+	h2, .h2{
+		color: #fff;
+	}
+	.gallery-images{
+		img{
+			margin-bottom: @pbv;
+		}
+	}
+}
+
+section.recent-news{
+
+}
 
 /*
 === === === === === === ===

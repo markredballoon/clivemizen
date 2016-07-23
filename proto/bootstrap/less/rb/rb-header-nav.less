@@ -1,34 +1,15 @@
 /* Variables */
 
 /* Height of the header */
-@header-height-base: 						80px;
-@header-height-responsive: 			100px;
-
-/* Logo dimentions and file location */
-
-@logo-image: 										url(../../..//demo-files/images/placeholder.png);
-@logo-image-responsive: 				@logo-image; /* Alternative logo for smaller sized screens */
-
-/* Default size of the logo */
-@logo-width-default: 						auto;
-@logo-height-default:						auto;
-
-/* Size of the logo within the header */
-@logo-width-header: 						@logo-width-default;
-@logo-height-header: 						@logo-height-default;
-
-/* Size of the logo in the footer */
-@logo-width-footer:							@logo-width-default;
-@logo-height-footer: 						@logo-height-default;
-
-
+@header-height-base: 						64px;
+@header-height-responsive: 			64px;
 
 /* Hamburger menu icon variables*/
-@menu-icon-colour: 							@brand-primary;
-@menu-icon-width: 							23px;
-@menu-icon-height: 							2px;
+@menu-icon-colour: 							#fff;
+@menu-icon-width: 							40px;
+@menu-icon-height: 							6px;
 @menu-icon-border-radius: 			0;
-@menu-icon-inside-margin: 			4px; /* Margin between the span elements */
+@menu-icon-inside-margin: 			7px; /* Margin between the span elements */
 
 /* Main navigation sizes */
 @nav-main-item-width: 					auto;
@@ -36,18 +17,44 @@
 
 /* Header links styles */
 
-header{
+body>header{
 	min-height: @header-height-base;
+	background-color: @cajm-blue-dark;
+}
+
+
+/* Logo */
+.logo{
+	margin-top: 8px;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 48px;
+	font-family: verdana;
+	color: #fff;
+	float: left;
+	@media screen and (max-width: @screen-md-max) and (min-width:@screen-md-min){
+		margin-left: 36px;
+	}
+	@media screen and (max-width: @screen-sm-max) and (min-width:@screen-sm-min){
+		margin-left: 8px;
+	}
+	@media screen and (max-width: @screen-xs-max){
+		margin-left: 20px;
+		font-size: 24px;
+	}
 }
 
 /* Hamburger */
 .nav-toggle{
+	float: right;
 	display: block;
 	position: relative;
 	border: none;
 	padding: 0;
 	border-radius: 0;
 	background: none;
+	margin: 15px 26px;
 	.icon-bar{
 		display: block;
     width: @menu-icon-width;
@@ -58,35 +65,58 @@ header{
 			margin-top: @menu-icon-inside-margin;
 		}
 	}
-	&:hover{
-		/* Hover state of the hamburger*/
-	}
 	&.open{
 		/* Styles when menu is open */
+		opacity: 0.4;
+		&:hover{
+			opacity: 1;
+		}
 	}
 }
 
 /* Default nav styles */
 nav{
+	float: right;
+	padding-top: 14px;
 	ul{
 		li{
 			/* Stuctural, try to avoid adding many styles to this element */
 			font-size: 0;
 			display: inline-block;
+			margin-left: 28px;
 			a{
 				/* Add margins and paddings to this element */
 				display: block;
-				font-size: @font-size-base;
-				span{
-					/* Type styles can go here */
+				font-family: @button-font;
+				font-weight: bold;
+				font-size: @font-size-large;
+				color: #FFFFFF;
+				line-height: 28px;
+				border: 2px solid #fff;
+				padding: 3px @pbh 1px;
+				-webkit-font-smoothing: antialiased;
+				width: 132px;
+				text-align: center;
+				text-transform: capitalize;
+				&:focus{
+					color: @cajm-blue-dark;
 				}
 				&:hover{
 					/* Hover state of menu items */
+					background-color: #fff;
+					color: @cajm-blue-dark;
 				}
 				&:hover, &:focus{
 					text-decoration: none; /* removes underline from the link*/
 				}
 			}
+		}
+		margin-right: 41px;
+		@media screen and (max-width: @screen-md-max){
+			margin-right: 36px;
+		}
+		@media screen and (max-width: @screen-sm-max){
+			margin-right: 8px;
 		}
 		&.v-list>li{
 			/* List where each item fills the whole width of the containing element */
@@ -94,6 +124,54 @@ nav{
 		}
 	}
 }
+@media screen and (max-width: @screen-xs-max){
+	body>main{
+		padding-top:@header-height-responsive;
+	}
+	body>header{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	#main-nav{
+		padding-top: 0;
+		margin: 0;
+		background-color: @cajm-blue-grey;
+		position: absolute;
+		display: block;
+		width: 100%;
+		top: @header-height-responsive;
+		left: 0;
+		transform: translateX(100%);
+		transition: transform 0.4s;
+		ul{
+			padding-top: 22px;
+			min-height: 100vh;
+			margin: 0;
+			li{
+				display: block;
+				width: 100%;
+				margin: 0;
+				border-bottom: 4px solid #fff;
+				&:first-child{
+					border-top: 4px solid #fff;
+				}
+				a{
+					padding: 13px 0 11px;
+					width: 100%;
+					border: none;
+					font-size: 24px;
+					line-height: 28px;
+				}
+			}
+		}
+	}
+	#main-nav.show{
+		transform: translate(0);
+	}
+}
+
 
 /* Hidden sub-menus, such dropdowns or mega menus. Not limited to those two however */
 .sub-menu{
@@ -110,11 +188,6 @@ nav{
 	width: 100%;
 }
 
-/* Dropdown styles */
-.dropdown .sub-menu{
-
-}
-
 /* Responsive menu styles. The show class is added when the menu toggle is pressed */
 .mobile-nav{
 	display: none;
@@ -123,40 +196,53 @@ nav{
 	}
 }
 
-
-/* Default ogo styles that can be used anywhere on the site */
-.logo{
-	&>a{
-		.cover-bg();
-		display: block;
-		background: @logo-image;
-		background-size: @logo-width-default @logo-height-default;
-		width: @logo-width-default;
-		height: @logo-height-default;
-	}
-	&.logo-image>a{
-		/* If the logo is brought in by an image and you want to get the aspect ratio from height:auto. */
-		height:auto;
-	}
-	&.logo-ar>a{
-		/* If the logo is a background image and you want to have a constant aspect ratio */
-		/* Width then Height value */
-		.aspect-ratio(16, 9);
-		.cover-bg();
-	}
-}
-/* Logo styles for the header and footer, the two places that are most likly to have a logo */
-header{
-	.logo>a{
-		width: @logo-width-header;
-		height: @logo-height-header;
-	}
-}
-
 footer{
-	.logo>a{
-		width: @logo-width-footer;
-		height: @logo-height-footer;
+	.social{
+		padding-top: 24px;
+		padding-bottom: 36px;
+		background-color: @cajm-blue-grey;
+		@media screen and (max-width: @screen-xs-max){
+			padding-top: @pbv;
+		}
+	}
+	.legal{
+		background-color: @cajm-blue-dark;
+		color: #fff;
+		font-size: @font-size-small;
+		text-align: right;
+		padding-top: @pbv;
+		padding-bottom: @pbv;
+		p{
+			margin: 0;
+		}
+		@media screen and (max-width: @screen-sm-max){
+			text-align: center;
+		}
+	}
+}
+
+ul.social-icons{
+	margin: 0;
+	font-size: 0;
+	text-align: center;
+	display: block;
+	li{
+		font-size: 0;
+		display: inline-block;
+		margin: 0 12px;
+		a{
+			border-radius: 50%;
+			display: block;
+			width: 36px;
+			height: 36px;
+			border: 4px solid @cajm-blue-dark;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			&:hover{
+				background-color: #fff;
+			}
+		}
 	}
 }
 

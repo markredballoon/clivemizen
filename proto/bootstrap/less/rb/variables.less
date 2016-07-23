@@ -893,72 +893,81 @@
 @brand-warning-rb:         #f0ad4e;
 @brand-danger-rb:          #d9534f;
 
+@cajm-blue-dark:#021645;
+@cajm-blue-light:#8994AD;
+@cajm-blue-grey:#4E5B79;
+@cajm-text-grey:#4A4A4A;
+@cajm-green:#24675C;
+
 /*----------------------------------------------------------*/
 /* Scaffolding [lines 32-46] */
 
 /* Background color for `<body>`. */
 @body-bg-rb:               #fff;
 /* Global text color on `<body>`. */
-@text-color-rb:            @gray-dark;
+@text-color-rb:            @cajm-text-grey;
 
 /* Global textual link color. */
-@link-color-rb:            @brand-primary;
+@link-color-rb:            @cajm-green;
 /* Link hover color set via `darken()` function. */
 @link-hover-color-rb:      darken(@link-color, 15%);
 /* Link hover decoration. */
-@link-hover-decoration-rb: underline;
+@link-hover-decoration-rb: none;
 
 
 /*----------------------------------------------------------*/
 /* Typography [lines 45-75] */
 
-@font-family-sans-serif-rb:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif-rb:       Georgia, "Times New Roman", Times, serif;
+@font-family-sans-serif-rb:  "Ubuntu", Helvetica, Arial, sans-serif;
+@font-family-serif-rb:       "Copperplate", Georgia, "Times New Roman", Times, serif;
 @font-family-monospace-rb:   Menlo, Monaco, Consolas, "Courier New", monospace;
+
+
+@button-font:"Kreon";
 
 @font-family-base-rb:        @font-family-sans-serif;
 
 @font-size-base-rb:          16px;
-@font-size-large-rb:         ceil((@font-size-base * 1.25)); // ~18px
-@font-size-small-rb:         ceil((@font-size-base * 0.85)); // ~12px
+@font-size-large-rb:         20px;
+@font-size-small-rb:         12px; // ~12px
 
 /* Unit-less `line-height` for use in components like buttons. */
-@line-height-base-rb:        1.6; // 20/14
-@line-height-large-rb:       1.3333333; // extra decimals for Win 8.1 Chrome
-@line-height-small-rb:       1.5;
+@line-height-base-rb:        1.25; // 20/14
+@line-height-large-rb:       1.5; // extra decimals for Win 8.1 Chrome
+@line-height-small-rb:       1;
 
 /* Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc. */
 @line-height-computed-rb:    floor((@font-size-base * @line-height-base)); // ~20px
 
 /* Headings */
-@headings-font-family-rb:    inherit;
-@headings-font-weight-rb:    500;
+@headings-font-family-rb:    @font-family-serif-rb;
+@headings-font-weight-rb:    bold;
 @headings-line-height-rb:    normal;
-@headings-color-rb:          inherit;
+@headings-color-rb:          @cajm-blue-dark;
 
-@font-size-h1-rb:            floor((@font-size-base * 2.6)); // ~36px
-@font-size-h2-rb:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3-rb:            ceil((@font-size-base * 1.7)); // ~24px
-@font-size-h4-rb:            ceil((@font-size-base * 1.25)); // ~18px
-@font-size-h5-rb:            @font-size-base;
-@font-size-h6-rb:            ceil((@font-size-base * 0.85)); // ~12px
+@font-size-h1-rb:            36px;
+@font-size-h2-rb:            26px;
+@font-size-h3-rb:            20px; // ~24px
+@font-size-h4-rb:            20px; // ~18px
+@font-size-h5-rb:            18px;
+@font-size-h6-rb:            12px; // ~12px
 
 
 /*----------------------------------------------------------*/
 /* Components [lines 94-125] */
 
 /* Paddings - base/large/small/xs */
-@pbv:  6px;
-@pbh:  12px;
+@pbv:  16px;
+@pbh:  16px;
 
-@plv:  10px;
-@plh:  16px;
+@plv:  44px;
+@plh:  24px;
 
-@psv:  5px;
-@psh:  10px;
+@psv:  8px;
+@psh:  8px;
 
-@pxv:  1px;
-@pxh:  5px;
+@pxv:  6px;
+@pxh:  4px;
 
 @border-radius-base-rb:        4px;
 @border-radius-large-rb:       6px;
@@ -981,59 +990,59 @@
 /* Media queries breakpoints */
 
 /* Extra small */
-@screen-xs-rb:                  480px;
+@screen-xs-rb:                  320px;
 
 /* Small */
 @screen-sm-rb:					768px;
 
 /* Medium */
-@screen-md-rb:					960px;
+@screen-md-rb:					1024px;
 
 /* Large */
-@screen-lg-rb:					1200px;
+@screen-lg-rb:					1216px;
 
 /* Grid system */
-@grid-columns-rb:              24;
-@grid-gutter-width-rb:         20px;
+@grid-columns-rb:              12;
+@grid-gutter-width-rb:         16px;
 
 /* Point at which the navbar becomes uncollapsed. */
 @grid-float-breakpoint-rb:     @screen-sm-min;
 
 /* Container sizes */
-@container-tablet-rb:             (748px + @grid-gutter-width);
-@container-desktop-rb:            (940px + @grid-gutter-width);
-@container-large-desktop-rb:      (1180px + @grid-gutter-width);
+@container-tablet-rb:             100%;
+@container-desktop-rb:            100%;
+@container-large-desktop-rb:      1216px;
 
 
 
 /*----------------------------------------------------------*/
-// Forms [lines 183 - 231] 
+// Forms [lines 183 - 231]
 
 // Form item hights:
 @input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
 @input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
 
-// `<input>` background color 
+// `<input>` background color
 @input-bg:                       #fff;
 @input-bg-disabled:              @gray-lighter;
 
-// Text color for `<input>`s 
+// Text color for `<input>`s
 @input-color:                    @gray;
 @input-border:                   #ccc;
 
-// Normal, large and small `.form-control` border radius 
+// Normal, large and small `.form-control` border radius
 @input-border-radius:            @border-radius-base;
 @input-border-radius-large:      @border-radius-large;
 @input-border-radius-small:      @border-radius-small;
 
-// Border color for inputs on focus 
+// Border color for inputs on focus
 @input-border-focus:             #66afe9;
 
-// Placeholder text color 
+// Placeholder text color
 @input-color-placeholder:        #999;
 
-// `.form-group` margin 
+// `.form-group` margin
 @form-group-margin-bottom:       15px;
 
 
@@ -1041,7 +1050,7 @@
 @legend-color:                   @gray-dark;
 @legend-border-color:            #e5e5e5;
 
-// Not sure these are required 
+// Not sure these are required
 // ** Background color for textual input addons
 @input-group-addon-bg:           @gray-lighter;
 // ** Border color for textual input addons

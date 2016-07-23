@@ -9,6 +9,7 @@ Variables used throughout the javascript.
 */
 var $window 			= $(window), // explination if required
 	$main 				= $('#main'),
+	$body = $('#body'),
 	scrollPos 			= -1,
 	windowWidth 		= $window.width(),
 	eventObject 		= { info: 'This object is used to trigger custom events on the page.'},
@@ -35,17 +36,6 @@ var intervalID = setInterval( function() {
 
 Functions that are called multiple times.
 */
-function toggleShow(target){
-	// Basic toggle for navigation objects. target is the object that will have to 'show' class toggled
-	var $target = $main;
-	if ( typeof target !== 'object' ) {
-		$target = $(target);
-	}
-	else{
-		$target = target;
-	}
-	$target.toggleClass('show');
-}
 
 function isPropertySupported(property){
 	// Returns true if propery is supported
@@ -95,11 +85,15 @@ jQuery(document).ready(function($) {
 	};
 
 	// Navigation toggle
-	$('.toggle').click(function(event) {
-		$(this).toggleClass('open');
-		if ($(this).find('.sub-menu').length > 0) {
-			toggleShow( $(this).find('.sub-menu') );
-		};
+	$('#menu-toggle').click(function(event) {
+		if (! $(this).hasClass('open')) {
+			$(this).addClass('open');
+			$('#main-nav').addClass('show');
+		}
+		else {
+			$(this).removeClass('open');
+			$('#main-nav').removeClass('show');
+		}
 	});
 
 /*
@@ -110,6 +104,8 @@ jQuery(document).ready(function($) {
 Fires every time the window is resized
 */
 $events.on('custom:resize', function(event) {
+	$('#menu-toggle').removeClass('open');
+	$('#main-nav').removeClass('show');
 });
 /*
 === === === === === === ===
