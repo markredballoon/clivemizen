@@ -86,8 +86,8 @@
 
 <main id="main">
 
-  <div class="hero">
-    <div class="bg"></div>
+  <div class="hero hero-small">
+    <div class="bg" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=Hero&w=1200&h=400);"></div>
   </div>
 
   <section class="container">
@@ -102,22 +102,25 @@
 
 </main><!--#main-->
 
+
 <footer class="footer">
 
-  <section class="social container">
-    <div class="sub-title row">
-        <h2>Get in Touch</h2>
-    </div><!-- sub-title -->
-    <div class="row">
-      <ul class="social-icons">
-        <li><a class="icon-facebook" href="#.">Facebook</a></li>
-        <li><a class="icon-linkedin" href="#.">LinkedIn</a></li>
-        <li><a class="icon-email" href="#.">Email</a></li>
-      </ul><!-- social-icons -->
-    </div><!-- row -->
+  <section class="social">
+    <div class="container">
+      <div class="sub-title row">
+          <h2>Get in Touch</h2>
+      </div><!-- sub-title -->
+      <div class="row">
+        <ul class="social-icons">
+          <li><a class="icon-facebook" href="#.">Facebook</a></li>
+          <li><a class="icon-linkedin" href="#.">LinkedIn</a></li>
+          <li><a class="icon-email" href="#.">Email</a></li>
+        </ul><!-- social-icons -->
+      </div><!-- row -->
+    </div>
   </section><!-- social -->
 
-  <section class="legal container">
+  <section class="legal">
     <p>Copyright (c) 2016 Copyright Holder All Rights Reserved.</p>
   </section><!-- legal -->
 

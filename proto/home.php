@@ -90,106 +90,111 @@
     <div class="bg" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=Hero&w=1200&h=400);"></div>
   </div>
 
-  <section class="container about-me">
-  	<div class="row">
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6">
-        <h2>About Me</h2>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-sm-pull-3 col-md-4 col-md-pull-1 pull-right">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=Bust&w=384&h=310" alt="" />
-      </div>
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6">
-        <p>This is a starting page for the development of theme pages.</p>
-        <p>The core styles and scripts are loaded and the barebones of the navigation is in the html.</p>
-      </div>
-  	</div>
+  <section class="about-me">
+    <div class="container">
+    	<div class="row">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6">
+          <h2>About Me</h2>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-pull-3 col-md-4 col-md-pull-1 pull-right">
+          <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=Bust&w=384&h=310" alt="" />
+        </div>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6">
+          <p>This is a starting page for the development of theme pages.</p>
+          <p>The core styles and scripts are loaded and the barebones of the navigation is in the html.</p>
+        </div>
+    	</div>
+    </div>
   </section>
 
-  <section class="container home-gallery">
-
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>Gallery</h2>
+  <section class="home-gallery">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Gallery</h2>
+        </div>
       </div>
+
+
+      <div class="row gallery-images">
+
+        <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-2 col-lg-3 col-lg-offset-0">
+          <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=gallery&w=300&h=300" alt="" />
+        </div>
+        <div class="col-xs-5 col-sm-4 col-md-2 col-lg-3">
+          <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=gallery&w=300&h=300" alt="" />
+        </div>
+        <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-0 col-lg-3">
+          <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=gallery&w=300&h=300" alt="" />
+        </div>
+        <div class="col-xs-5 col-sm-4 col-md-2 col-lg-3">
+          <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=gallery&w=300&h=300" alt="" />
+        </div>
+
+      </div><!--gallery-images-->
+
+      <div class="row">
+        <div class="col-xs-11 col-sm-10 col-lg-12">
+          <a href="/gallery/" class="see-more-white">See More</a>
+        </div>
+      </div>
+
     </div>
-
-    <div class="row gallery-images">
-
-      <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-2 col-lg-3 col-lg-offset-0">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=gallery&w=300&h=300" alt="" />
-      </div>
-      <div class="col-xs-5 col-sm-4 col-md-2 col-lg-3">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=gallery&w=300&h=300" alt="" />
-      </div>
-      <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-0 col-lg-3">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=gallery&w=300&h=300" alt="" />
-      </div>
-      <div class="col-xs-5 col-sm-4 col-md-2 col-lg-3">
-        <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=gallery&w=300&h=300" alt="" />
-      </div>
-
-    </div><!--gallery-images-->
-
-    <div class="row">
-      <div class="col-xs-11 col-sm-10 col-lg-12">
-        <a href="/gallery/" class="see-more-white">See More</a>
-      </div>
-    </div>
-
   </section><!--home-gallery-->
 
-  <section class="container recent-news">
+  <section class="recent-news">
+    <div class="container">
+      <div class="col-xs-12">
+        <h2>What I've Been Up To</h2>
+      </div>
 
-    <div class="col-xs-12">
-      <h2>What I've Been Up To</h2>
-    </div>
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
 
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <article class="in-index-large">
+          <header>
+            <h3>Article Title Goes here</h3>
+            <time date-time="2016/07/20 8:44:38 PM" class="date">JAN 2016</time>
+          </header>
+          <main>
+            <p>This is the Excerpt of the post. It won’t show all of the text until the see more button is pressed. <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet magna ac diam tincidunt, sed sodales enim condimentum. Phasellus id .</p>
+            <p>Praesent condimentum tempor massa, nec mattis augue pulvinar non. Curabitur quis tellus consectetur</p>
+          </main>
+          <footer>
+            <a href="#" class="button">Read More</a>
+          </footer>
+        </article>
 
-      <article class="in-index-large">
-        <header>
-          <h3>Article Title Goes here</h3>
-          <time date-time="2016/07/20 8:44:38 PM" class="date">JAN 2016</time>
-        </header>
-        <main>
-          <p>This is the Excerpt of the post. It won’t show all of the text until the see more button is pressed. <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet magna ac diam tincidunt, sed sodales enim condimentum. Phasellus id .</p>
-          <p>Praesent condimentum tempor massa, nec mattis augue pulvinar non. Curabitur quis tellus consectetur</p>
-        </main>
-        <footer>
-          <a href="#" class="button">Read More</a>
-        </footer>
-      </article>
+        <article class="in-index-large">
+          <header>
+            <h3>Article Title Goes here</h3>
+            <time date-time="2016/07/20 8:44:38 PM" class="date">JAN 2016</time>
+          </header>
+          <main>
+            <p>This is the Excerpt of the post. It won’t show all of the text until the see more button is pressed. <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet magna ac diam tincidunt, sed sodales enim condimentum. Phasellus id .</p>
+            <p>Praesent condimentum tempor massa, nec mattis augue pulvinar non. Curabitur quis tellus consectetur</p>
+          </main>
+          <footer>
+            <a href="#" class="button">Read More</a>
+          </footer>
+        </article>
 
-      <article class="in-index-large">
-        <header>
-          <h3>Article Title Goes here</h3>
-          <time date-time="2016/07/20 8:44:38 PM" class="date">JAN 2016</time>
-        </header>
-        <main>
-          <p>This is the Excerpt of the post. It won’t show all of the text until the see more button is pressed. <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet magna ac diam tincidunt, sed sodales enim condimentum. Phasellus id .</p>
-          <p>Praesent condimentum tempor massa, nec mattis augue pulvinar non. Curabitur quis tellus consectetur</p>
-        </main>
-        <footer>
-          <a href="#" class="button">Read More</a>
-        </footer>
-      </article>
+        <article class="in-index-large">
+          <header>
+            <h3>Article Title Goes here</h3>
+            <time date-time="2016/07/20 8:44:38 PM" class="date">JAN 2016</time>
+          </header>
+          <main>
+            <p>This is the Excerpt of the post. It won’t show all of the text until the see more button is pressed. <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet magna ac diam tincidunt, sed sodales enim condimentum. Phasellus id .</p>
+            <p>Praesent condimentum tempor massa, nec mattis augue pulvinar non. Curabitur quis tellus consectetur</p>
+          </main>
+          <footer>
+            <a href="#" class="button">Read More</a>
+          </footer>
+        </article>
 
-      <article class="in-index-large">
-        <header>
-          <h3>Article Title Goes here</h3>
-          <time date-time="2016/07/20 8:44:38 PM" class="date">JAN 2016</time>
-        </header>
-        <main>
-          <p>This is the Excerpt of the post. It won’t show all of the text until the see more button is pressed. <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet magna ac diam tincidunt, sed sodales enim condimentum. Phasellus id .</p>
-          <p>Praesent condimentum tempor massa, nec mattis augue pulvinar non. Curabitur quis tellus consectetur</p>
-        </main>
-        <footer>
-          <a href="#" class="button">Read More</a>
-        </footer>
-      </article>
+        <a href="/archive/" class="see-more-green">See More</a>
 
-      <a href="/archive/" class="see-more-green">See More</a>
-
+      </div>
     </div>
 
   </section>
@@ -198,20 +203,22 @@
 
 <footer class="footer">
 
-  <section class="social container">
-    <div class="sub-title row">
-        <h2>Get in Touch</h2>
-    </div><!-- sub-title -->
-    <div class="row">
-      <ul class="social-icons">
-        <li><a class="icon-facebook" href="#.">Facebook</a></li>
-        <li><a class="icon-linkedin" href="#.">LinkedIn</a></li>
-        <li><a class="icon-email" href="#.">Email</a></li>
-      </ul><!-- social-icons -->
-    </div><!-- row -->
+  <section class="social">
+    <div class="container">
+      <div class="sub-title row">
+          <h2>Get in Touch</h2>
+      </div><!-- sub-title -->
+      <div class="row">
+        <ul class="social-icons">
+          <li><a class="icon-facebook" href="#.">Facebook</a></li>
+          <li><a class="icon-linkedin" href="#.">LinkedIn</a></li>
+          <li><a class="icon-email" href="#.">Email</a></li>
+        </ul><!-- social-icons -->
+      </div><!-- row -->
+    </div>
   </section><!-- social -->
 
-  <section class="legal container">
+  <section class="legal">
     <p>Copyright (c) 2016 Copyright Holder All Rights Reserved.</p>
   </section><!-- legal -->
 

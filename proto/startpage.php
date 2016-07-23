@@ -91,33 +91,38 @@
   </div>
 
   <section class="container">
-  	<div class="row">
-      <div class="col-xs-24 text-center">
-        <h1>Starting Page</h1>
-        <p>This is a starting page for the development of theme pages.</p>
-        <p>The core styles and scripts are loaded and the barebones of the navigation is in the html.</p>
-      </div>
-  	</div>
+    <div class="container">
+    	<div class="row">
+        <div class="col-xs-24 text-center">
+          <h1>Starting Page</h1>
+          <p>This is a starting page for the development of theme pages.</p>
+          <p>The core styles and scripts are loaded and the barebones of the navigation is in the html.</p>
+        </div>
+    	</div>
+    </div>
   </section>
 
 </main><!--#main-->
 
+
 <footer class="footer">
 
-  <section class="social container">
-    <div class="sub-title row">
-        <h2>Get in Touch</h2>
-    </div><!-- sub-title -->
-    <div class="row">
-      <ul class="social-icons">
-        <li><a class="icon-facebook" href="#.">Facebook</a></li>
-        <li><a class="icon-linkedin" href="#.">LinkedIn</a></li>
-        <li><a class="icon-email" href="#.">Email</a></li>
-      </ul><!-- social-icons -->
-    </div><!-- row -->
+  <section class="social">
+    <div class="container">
+      <div class="sub-title row">
+          <h2>Get in Touch</h2>
+      </div><!-- sub-title -->
+      <div class="row">
+        <ul class="social-icons">
+          <li><a class="icon-facebook" href="#.">Facebook</a></li>
+          <li><a class="icon-linkedin" href="#.">LinkedIn</a></li>
+          <li><a class="icon-email" href="#.">Email</a></li>
+        </ul><!-- social-icons -->
+      </div><!-- row -->
+    </div>
   </section><!-- social -->
 
-  <section class="legal container">
+  <section class="legal">
     <p>Copyright (c) 2016 Copyright Holder All Rights Reserved.</p>
   </section><!-- legal -->
 
