@@ -88,17 +88,22 @@
 
   <div class="hero hero-small">
     <div class="bg" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=Hero&w=1200&h=400);"></div>
-    <div class="title">
-      <h2>News posts</h2>
-    </div>
   </div>
 
-  <section class="sectionname">
+  <section class="article">
     <div class="container">
     	<div class="row">
-        <div class="col-xs-12">
-          <p>This is a starting page for the development of theme pages.</p>
-          <p>The core styles and scripts are loaded and the barebones of the navigation is in the html.</p>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <article class="full">
+            <header>
+              <h1>Posts Title</h1>
+              <time>JAN 2016</time>
+            </header>
+            <main>
+              <p>This is a starting page for the development of theme pages.</p>
+              <p>The core styles and scripts are loaded and the barebones of the navigation is in the html.</p>
+            </main>
+          </article>
         </div>
       </div>
   	</div>

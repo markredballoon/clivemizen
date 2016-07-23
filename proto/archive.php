@@ -88,14 +88,245 @@
 
   <div class="hero hero-small">
     <div class="bg" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=Hero&w=1200&h=400);"></div>
+    <div class="title">
+      <h2>News posts</h2>
+    </div>
   </div>
 
-  <section class="container">
-  	<div class="row">
-      <div class="col-xs-24 text-center">
-        <h1>Starting Page</h1>
-        <p>This is a starting page for the development of theme pages.</p>
-        <p>The core styles and scripts are loaded and the barebones of the navigation is in the html.</p>
+  <section class="news-index">
+    <div class="container">
+    	<div class="row">
+
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <article class="in-index-large">
+            <header>
+              <h3>Article Title Goes here</h3>
+              <time date-time="2016/07/20 8:44:38 PM" class="date">JAN 2016</time>
+            </header>
+            <main>
+              <p>This is the Excerpt of the post. It won’t show all of the text until the see more button is pressed. <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet magna ac diam tincidunt, sed sodales enim condimentum. Phasellus id .</p>
+              <p>Praesent condimentum tempor massa, nec mattis augue pulvinar non. Curabitur quis tellus consectetur</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <article class="in-index-large">
+            <header>
+              <h3>Article Title Goes here</h3>
+              <time date-time="2016/07/20 8:44:38 PM" class="date">JAN 2016</time>
+            </header>
+            <main>
+              <p>This is the Excerpt of the post. It won’t show all of the text until the see more button is pressed. <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet magna ac diam tincidunt, sed sodales enim condimentum. Phasellus id .</p>
+              <p>Praesent condimentum tempor massa, nec mattis augue pulvinar non. Curabitur quis tellus consectetur</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <article class="in-index-large">
+            <header>
+              <h3>Article Title Goes here</h3>
+              <time date-time="2016/07/20 8:44:38 PM" class="date">JAN 2016</time>
+            </header>
+            <main>
+              <p>This is the Excerpt of the post. It won’t show all of the text until the see more button is pressed. <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet magna ac diam tincidunt, sed sodales enim condimentum. Phasellus id .</p>
+              <p>Praesent condimentum tempor massa, nec mattis augue pulvinar non. Curabitur quis tellus consectetur</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+          <article class="in-index-large">
+            <header>
+              <h3>Article Title Goes here</h3>
+              <time date-time="2016/07/20 8:44:38 PM" class="date">JAN 2016</time>
+            </header>
+            <main>
+              <p>This is the Excerpt of the post. It won’t show all of the text until the see more button is pressed. <br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam aliquet magna ac diam tincidunt, sed sodales enim condimentum. Phasellus id .</p>
+              <p>Praesent condimentum tempor massa, nec mattis augue pulvinar non. Curabitur quis tellus consectetur</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+
+        <div class="col-xs-12 text-center">
+          <h4>Older Updates</h4>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="in-index-small">
+            <header>
+              <h3>Post title goes here</h3>
+              <time>JAN 2016</time>
+            </header>
+            <main class="hidden">
+              <p>Excerpt gets added here</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="in-index-small">
+            <header>
+              <h3>Post title goes here</h3>
+              <time>JAN 2016</time>
+            </header>
+            <main class="hidden">
+              <p>Excerpt gets added here</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="in-index-small">
+            <header>
+              <h3>Post title goes here</h3>
+              <time>JAN 2016</time>
+            </header>
+            <main class="hidden">
+              <p>Excerpt gets added here</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="in-index-small">
+            <header>
+              <h3>Post title goes here</h3>
+              <time>JAN 2016</time>
+            </header>
+            <main class="hidden">
+              <p>Excerpt gets added here</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="in-index-small">
+            <header>
+              <h3>Post title goes here</h3>
+              <time>JAN 2016</time>
+            </header>
+            <main class="hidden">
+              <p>Excerpt gets added here</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="in-index-small">
+            <header>
+              <h3>Post title goes here</h3>
+              <time>JAN 2016</time>
+            </header>
+            <main class="hidden">
+              <p>Excerpt gets added here</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="in-index-small">
+            <header>
+              <h3>Post title goes here</h3>
+              <time>JAN 2016</time>
+            </header>
+            <main class="hidden">
+              <p>Excerpt gets added here</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="in-index-small">
+            <header>
+              <h3>Post title goes here</h3>
+              <time>JAN 2016</time>
+            </header>
+            <main class="hidden">
+              <p>Excerpt gets added here</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="in-index-small">
+            <header>
+              <h3>Post title goes here</h3>
+              <time>JAN 2016</time>
+            </header>
+            <main class="hidden">
+              <p>Excerpt gets added here</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="in-index-small">
+            <header>
+              <h3>Post title goes here</h3>
+              <time>JAN 2016</time>
+            </header>
+            <main class="hidden">
+              <p>Excerpt gets added here</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <article class="in-index-small">
+            <header>
+              <h3>Post title goes here</h3>
+              <time>JAN 2016</time>
+            </header>
+            <main class="hidden">
+              <p>Excerpt gets added here</p>
+            </main>
+            <footer>
+              <a href="#" class="button">Read More</a>
+            </footer>
+          </article>
+        </div>
+
       </div>
   	</div>
   </section>

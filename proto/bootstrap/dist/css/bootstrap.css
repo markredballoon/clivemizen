@@ -6433,8 +6433,17 @@ If the hero height changes at different screen sizes:
   z-index: 1;
 }
 .hero .title {
-  position: relative;
+  position: absolute;
+  bottom: 36px;
+  left: 0;
   z-index: 2;
+  width: 100%;
+}
+.hero .title h1,
+.hero .title .h1,
+.hero .title h2,
+.hero .title .h2 {
+  margin: 0;
 }
 /* Styles for background carousel. comment out if not using */
 /*
@@ -7652,6 +7661,7 @@ header {
 #main {
   position: relative;
   z-index: 1;
+  min-height: 60vh;
 }
 footer {
   position: relative;
@@ -7758,6 +7768,7 @@ article.in-index-large header h3 {
 }
 article.in-index-large header time {
   float: right;
+  font-family: Verdana;
   font-weight: bold;
 }
 article.in-index-large footer {
@@ -7781,6 +7792,136 @@ article.in-index-large footer:after {
 }
 article.in-index-large footer .button {
   float: right;
+}
+article.in-index-small {
+  position: relative;
+  width: 100%;
+  padding: 16px 162px 16px 24px;
+  margin-bottom: 24px;
+}
+article.in-index-small header {
+  display: block;
+  vertical-align: bottom;
+}
+article.in-index-small header:before,
+article.in-index-small header:after {
+  display: table;
+  content: " ";
+}
+article.in-index-small header:after {
+  clear: both;
+}
+article.in-index-small header:before,
+article.in-index-small header:after {
+  display: table;
+  content: " ";
+}
+article.in-index-small header:after {
+  clear: both;
+}
+article.in-index-small header h3 {
+  margin-bottom: 8px;
+  text-align: left;
+}
+article.in-index-small header time {
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #4e5b79;
+}
+article.in-index-small footer {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  display: block;
+  height: 100%;
+  font-size: 0;
+}
+article.in-index-small footer::after {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+  content: ' ';
+}
+article.in-index-small footer .button {
+  display: inline-block;
+  vertical-align: middle;
+}
+@media screen and (max-width: 380px) {
+  article.in-index-small {
+    padding-right: 150px;
+  }
+  article.in-index-small footer {
+    right: 12px;
+  }
+}
+div:nth-child(2n-1) > article.in-index-small {
+  background-color: #d0d4de;
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  div:nth-child(4n-3) > article.in-index-small,
+  div:nth-child(4n) > article.in-index-small {
+    background-color: #d0d4de;
+  }
+  div:nth-child(4n-2) > article.in-index-small,
+  div:nth-child(4n-1) > article.in-index-small {
+    background-color: #fff;
+  }
+}
+article.full header {
+  display: block;
+}
+article.full header:before,
+article.full header:after {
+  display: table;
+  content: " ";
+}
+article.full header:after {
+  clear: both;
+}
+article.full header:before,
+article.full header:after {
+  display: table;
+  content: " ";
+}
+article.full header:after {
+  clear: both;
+}
+article.full header time {
+  float: right;
+  font-family: Verdana;
+  font-weight: bold;
+}
+article.full header time::before {
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  content: "Date - ";
+}
+@media screen and (min-width: 1024px) {
+  article.full header h1,
+  article.full header .h1 {
+    float: left;
+  }
+  article.full header time {
+    margin-top: 18px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  article.full header h1 {
+    margin-bottom: 8px;
+  }
+  article.full header time {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  article.full header time {
+    width: 100%;
+    text-align: center;
+  }
 }
 /*
 === === === === === === ===

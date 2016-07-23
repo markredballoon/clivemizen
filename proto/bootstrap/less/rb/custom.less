@@ -43,6 +43,7 @@ header{
 #main{
 	position: relative;
 	z-index: 1;
+	min-height: 60vh;
 }
 
 
@@ -124,6 +125,7 @@ article.in-index-large{
 		time{
 			float: right;
 			font-weight: bold;
+			font-family: Verdana;
 		}
 	}
 	footer{
@@ -134,7 +136,113 @@ article.in-index-large{
 		}
 	}
 }
+article.in-index-small{
+	width: 100%;
+	padding: 16px 162px 16px 24px;
+	margin-bottom: 24px;
+	position: relative;
+	header{
+		.clearfix();
+		display: block;
+		vertical-align: bottom;
+		h3{
+			text-align: left;
+			margin-bottom: 8px;
+		}
+		time{
+			font-weight: bold;
+			font-family: Verdana;
+			font-size: 14px;
+			color: #4E5B79;
+			line-height: 20px;
+		}
+	}
+	footer{
+		position: absolute;
+		right: 24px;
+		top: 0;
+		height: 100%;
+		display: block;
+		font-size: 0;
+		&::after{
+			content: ' ';
+			position: relative;
+			height: 100%;
+			width: 0;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.button{
+			vertical-align: middle;
+			display: inline-block;
+		}
+	}
+	@media screen and (max-width: 380px){
+		padding-right: 150px;
+		footer{
+			right: 12px;
+		}
+	}
+}
+div:nth-child(2n-1)>article.in-index-small{
+	background-color: @cajm-blue-x-light;
+}
+@media screen and (max-width: @screen-sm-max) and (min-width:@screen-sm-min){
+	div:nth-child(4n-3)>article.in-index-small,
+	div:nth-child(4n)>article.in-index-small{
+		background-color: @cajm-blue-x-light;
+	}
+	div:nth-child(4n-2)>article.in-index-small,
+	div:nth-child(4n-1)>article.in-index-small{
+		background-color: #fff;;
+	}
+}
 
+article.full{
+	header{
+		.clearfix();
+		display: block;
+		time{
+			float: right;
+			font-weight: bold;
+			font-family: Verdana;
+			&::before{
+				content: "Date - ";
+				font-family: @font-family-base;
+				font-weight: normal;
+			}
+		}
+	}
+	@media screen and (min-width: @screen-md-min){
+		header{
+			h1, .h1{
+				float: left;
+			}
+			time{
+				margin-top: 18px;
+			}
+		}
+	}
+
+	@media screen and (max-width: @screen-sm-max){
+		header{
+			h1{
+				margin-bottom: 8px;
+			}
+			time{
+				margin-bottom: 16px;
+			}
+		}
+	}
+	@media screen and (max-width: @screen-xs-max){
+		header{
+			time{
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}
 /*
 === === === === === === ===
 _page_specific
