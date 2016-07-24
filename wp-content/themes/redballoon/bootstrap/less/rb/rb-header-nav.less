@@ -1,0 +1,263 @@
+/* Variables */
+
+/* Height of the header */
+@header-height-base: 						64px;
+@header-height-responsive: 			64px;
+
+/* Hamburger menu icon variables*/
+@menu-icon-colour: 							#fff;
+@menu-icon-width: 							40px;
+@menu-icon-height: 							6px;
+@menu-icon-border-radius: 			0;
+@menu-icon-inside-margin: 			7px; /* Margin between the span elements */
+
+/* Main navigation sizes */
+@nav-main-item-width: 					auto;
+@nav-main-item-height: 					auto;
+
+/* Header links styles */
+
+body>header{
+	min-height: @header-height-base;
+	background-color: @cajm-blue-dark;
+	background-image: url(../../../images/dark-bg.png);
+}
+
+
+/* Logo */
+.logo{
+	margin-top: 8px;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 48px;
+	font-family: verdana;
+	color: #fff;
+	float: left;
+	@media screen and (max-width: @screen-md-max) and (min-width:@screen-md-min){
+		margin-left: 36px;
+	}
+	@media screen and (max-width: @screen-sm-max) and (min-width:@screen-sm-min){
+		margin-left: 8px;
+	}
+	@media screen and (max-width: @screen-xs-max){
+		margin-left: 20px;
+		font-size: 24px;
+	}
+}
+
+/* Hamburger */
+.nav-toggle{
+	float: right;
+	display: block;
+	position: relative;
+	border: none;
+	padding: 0;
+	border-radius: 0;
+	background: none;
+	margin: 15px 26px;
+	.icon-bar{
+		display: block;
+    width: @menu-icon-width;
+    height: @menu-icon-height;
+		background: @menu-icon-colour;
+		border-radius: @menu-icon-border-radius;
+		& + .icon-bar{
+			margin-top: @menu-icon-inside-margin;
+		}
+	}
+	&.open{
+		/* Styles when menu is open */
+		opacity: 0.4;
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
+
+/* Default nav styles */
+nav{
+	float: right;
+	padding-top: 14px;
+	ul{
+		li{
+			/* Stuctural, try to avoid adding many styles to this element */
+			font-size: 0;
+			display: inline-block;
+			margin-left: 28px;
+			@media screen and (max-width: @screen-sm-max) and (min-width: @screen-sm-min){
+				margin-left: 16px;
+			}
+			a{
+				/* Add margins and paddings to this element */
+				display: block;
+				font-family: @font-family-serif;
+				font-weight: bold;
+				font-size: @font-size-large;
+				color: #FFFFFF;
+				line-height: 28px;
+				border: 2px solid #fff;
+				padding: 3px @pbh 1px;
+				-webkit-font-smoothing: antialiased;
+				width: 132px;
+				text-align: center;
+				text-transform: capitalize;
+				&:focus{
+					color: @cajm-blue-dark;
+				}
+				&:hover{
+					/* Hover state of menu items */
+					background-color: #fff;
+					color: @cajm-blue-dark;
+				}
+				&:hover, &:focus{
+					text-decoration: none; /* removes underline from the link*/
+				}
+			}
+		}
+		margin-right: 41px;
+		@media screen and (max-width: @screen-md-max){
+			margin-right: 36px;
+		}
+		@media screen and (max-width: @screen-sm-max){
+			margin-right: 8px;
+		}
+		&.v-list>li{
+			/* List where each item fills the whole width of the containing element */
+			display: block;
+		}
+	}
+}
+@media screen and (max-width: @screen-xs-max){
+	body>main{
+		padding-top:@header-height-responsive;
+	}
+	body>header{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	#main-nav{
+		padding-top: 0;
+		margin: 0;
+		background-color: @cajm-blue-grey;
+		position: absolute;
+		display: block;
+		width: 100%;
+		top: @header-height-responsive;
+		left: 0;
+		transform: translateX(100%);
+		transition: transform 0.4s;
+		ul{
+			padding-top: 22px;
+			min-height: 100vh;
+			margin: 0;
+			li{
+				display: block;
+				width: 100%;
+				margin: 0;
+				border-bottom: 4px solid #fff;
+				&:first-child{
+					border-top: 4px solid #fff;
+				}
+				a{
+					padding: 13px 0 11px;
+					width: 100%;
+					border: none;
+					font-size: 24px;
+					line-height: 28px;
+				}
+			}
+		}
+	}
+	#main-nav.show{
+		transform: translate(0);
+	}
+}
+
+
+/* Hidden sub-menus, such dropdowns or mega menus. Not limited to those two however */
+.sub-menu{
+	position: absolute;
+	display: none;
+	&.show{
+		display: block;
+	}
+}
+
+/* Megamenu styles */
+.mega-menu .sub-menu{
+	left: 0;
+	width: 100%;
+}
+
+/* Responsive menu styles. The show class is added when the menu toggle is pressed */
+.mobile-nav{
+	display: none;
+	&.show{
+		display: block;
+	}
+}
+
+footer{
+	.social{
+		padding-top: 24px;
+		padding-bottom: 36px;
+		background-color: @cajm-blue-grey;
+		background-image: url(../../../images/gallery-bg.png);
+		@media screen and (max-width: @screen-xs-max){
+			padding-top: @pbv;
+		}
+	}
+	.legal{
+		background-color: @cajm-blue-dark;
+		background-image: url(../../../images/dark-bg.png);
+		color: #fff;
+		font-size: @font-size-small;
+		text-align: right;
+		padding-top: @pbv;
+		padding-bottom: @pbv;
+		padding-right: 8px;
+		padding-left: 8px;
+		p{
+			margin: 0;
+		}
+		@media screen and (max-width: @screen-sm-max){
+			text-align: center;
+		}
+	}
+}
+
+ul.social-icons{
+	margin: 0;
+	font-size: 0;
+	text-align: center;
+	display: block;
+	li{
+		font-size: 0;
+		display: inline-block;
+		margin: 0 12px;
+		a{
+			border-radius: 50%;
+			display: block;
+			width: 36px;
+			height: 36px;
+			border: 4px solid @cajm-blue-dark;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			&:hover{
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+/*
+@media screen and (max-width: [breakpoint] ;){
+
+Add responsive menu styles here
+
+}
+*/

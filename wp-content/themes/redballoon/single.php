@@ -1,34 +1,28 @@
 <?php get_header(); ?>
-<?php if (have_posts()) : while (have_posts()) : the_post();
-			/*
-			 * Include the post format-specific template for the content. If you want to
-			 * use this in a child theme, then include a file called called content-___.php
-			 * (where ___ is the post format) and that will be used instead.
-			 */
-			get_template_part( 'content', get_post_format() );
-
-			// /* If comments are open or we have at least one comment, load up the comment template.
-			/*
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-			
-			// Previous/next post navigation.
-			the_post_navigation( array(
-				'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentyfifteen' ) . '</span> ' .
-					'<span class="screen-reader-text">' . __( 'Next post:', 'twentyfifteen' ) . '</span> ' .
-					'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentyfifteen' ) . '</span> ' .
-					'<span class="screen-reader-text">' . __( 'Previous post:', 'twentyfifteen' ) . '</span> ' .
-					'<span class="post-title">%title</span>',
-			) );
-			*/
-		// End the loop.
-		?>
-
-		
+<main id="main">
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+  <div class="hero hero-small">
+    <div class="bg" style="background-image:url(<?=wp_get_attachment_image_src(get_post_thumbnail_id(get_the_id()), 'full')[0]?>);"></div>
+  </div>
+	<section class="article">
+	  <div class="container">
+	    <div class="row">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <article class="full">
+            <header>
+              <h1><?the_title()?></h1>
+              <time date-time="<?=get_the_time('c')?>" class="date"><?=get_the_date( 'M Y' )?></time>
+            </header>
+            <main>
+							<?the_content()?>
+            </main>
+          </article>
+        </div>
+	    </div>
+	  </div>
+	</section>
 <?php endwhile; else: ?>
 	<h1>Sorry, no posts matched your criteria.</h1>
 <?php endif; ?>
-		
+</main>
 <?php get_footer(); ?>

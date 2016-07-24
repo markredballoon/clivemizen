@@ -57,6 +57,11 @@ footer{
 _general_styles
 === === === === === === ===
 */
+body{
+	background-color: #fdfdfd;
+	background-attachment: fixed;
+	background-image: url(../../../images/body-bg.png);
+}
 a{
 	/* Adds opacity, background-color, and color transitions. The base transition speed is 0.5s */
 	.fadeTransition();
@@ -106,6 +111,7 @@ _Reused_classes
 	text-align: center;
 	&:hover{
 		background-color: @cajm-blue-dark;
+		background-image: url(../../../imges/dark-bg.png);
 		color: #fff;
 	}
 }
@@ -113,6 +119,7 @@ _Reused_classes
 article.in-index-large{
 	width: 100%;
 	border: 2px solid @cajm-blue-dark;
+	background-color: #fff;
 	padding: 16px 24px;
 	margin-bottom: 24px;
 	header{
@@ -138,6 +145,7 @@ article.in-index-large{
 }
 article.in-index-small{
 	width: 100%;
+	background-color: #fff;
 	padding: 16px 162px 16px 24px;
 	margin-bottom: 24px;
 	position: relative;
@@ -213,6 +221,10 @@ article.full{
 			}
 		}
 	}
+	main{
+		background-color: #fff;
+		padding: 16px 24px;
+	}
 	@media screen and (min-width: @screen-md-min){
 		header{
 			h1, .h1{
@@ -257,6 +269,7 @@ main section{
 
 section.home-gallery{
 	background-color: @cajm-blue-grey;
+	background-image: url(../../../images/gallery-bg.png);
 	h2, .h2{
 		color: #fff;
 	}

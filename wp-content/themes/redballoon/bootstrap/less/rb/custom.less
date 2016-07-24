@@ -1,0 +1,290 @@
+/* Custom LESS styles */
+
+/*
+
+Contents:
+
+_structural_styles
+_z-indexs
+_general_styles
+_Reused_classes
+_page_specific
+_sidebar
+
+*/
+
+/*
+=== === === === === === ===
+_structural_styles
+=== === === === === === ===
+*/
+
+html{}
+body{}
+#main{}
+
+section{
+	position: relative;
+}
+/*
+=== === === === === === ===
+_z-indexs
+=== === === === === === ===
+*/
+body{
+	position: relative;
+}
+
+header{
+	position: relative;
+	z-index: 3;
+}
+
+#main{
+	position: relative;
+	z-index: 1;
+	min-height: 60vh;
+}
+
+
+footer{
+	position: relative;
+	z-index: 2;
+}
+
+/*
+=== === === === === === ===
+_general_styles
+=== === === === === === ===
+*/
+body{
+	background-color: #fdfdfd;
+	background-attachment: fixed;
+	background-image: url(../../../images/body-bg.png);
+}
+a{
+	/* Adds opacity, background-color, and color transitions. The base transition speed is 0.5s */
+	.fadeTransition();
+}
+
+section{
+	img{
+		width: 100%;
+		height: auto;
+		margin-bottom: @pbv;
+	}
+}
+/*
+=== === === === === === ===
+_Reused_classes
+=== === === === === === ===
+*/
+.see-more(@see-more-color:#fff; @see-more-img:url(../../../images/double-chevron-right.svg);){
+	float: right;
+	padding-right: 24px;
+	color: @see-more-color;
+	text-transform: capitalize;
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-image: @see-more-img;
+	&:hover, &:active, &:focus{
+		color: @see-more-color;
+		text-decoration: underline;
+	}
+}
+.see-more-white{
+	.see-more();
+}
+.see-more-green{
+	.see-more(@cajm-green, url(../../../images/double-chevron-right-green.svg));
+}
+
+.button{
+	display: block;
+	width: 132px;
+	border: 2px solid @cajm-blue-dark;
+	color: @cajm-blue-dark;
+	padding: 8px 12px 8px;
+	font-size: 16px;
+	line-height: 1;
+	text-align: center;
+	&:hover{
+		background-color: @cajm-blue-dark;
+		background-image: url(../../../imges/dark-bg.png);
+		color: #fff;
+	}
+}
+
+article.in-index-large{
+	width: 100%;
+	border: 2px solid @cajm-blue-dark;
+	background-color: #fff;
+	padding: 16px 24px;
+	margin-bottom: 24px;
+	header{
+		.clearfix();
+		display: block;
+		vertical-align: bottom;
+		h3{
+			float: left;
+		}
+		time{
+			float: right;
+			font-weight: bold;
+			font-family: Verdana;
+		}
+	}
+	footer{
+		.clearfix();
+		display: block;
+		.button{
+			float: right;
+		}
+	}
+}
+article.in-index-small{
+	width: 100%;
+	background-color: #fff;
+	padding: 16px 162px 16px 24px;
+	margin-bottom: 24px;
+	position: relative;
+	header{
+		.clearfix();
+		display: block;
+		vertical-align: bottom;
+		h3{
+			text-align: left;
+			margin-bottom: 8px;
+		}
+		time{
+			font-weight: bold;
+			font-family: Verdana;
+			font-size: 14px;
+			color: #4E5B79;
+			line-height: 20px;
+		}
+	}
+	footer{
+		position: absolute;
+		right: 24px;
+		top: 0;
+		height: 100%;
+		display: block;
+		font-size: 0;
+		&::after{
+			content: ' ';
+			position: relative;
+			height: 100%;
+			width: 0;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.button{
+			vertical-align: middle;
+			display: inline-block;
+		}
+	}
+	@media screen and (max-width: 380px){
+		padding-right: 150px;
+		footer{
+			right: 12px;
+		}
+	}
+}
+div:nth-child(2n-1)>article.in-index-small{
+	background-color: @cajm-blue-x-light;
+}
+@media screen and (max-width: @screen-sm-max) and (min-width:@screen-sm-min){
+	div:nth-child(4n-3)>article.in-index-small,
+	div:nth-child(4n)>article.in-index-small{
+		background-color: @cajm-blue-x-light;
+	}
+	div:nth-child(4n-2)>article.in-index-small,
+	div:nth-child(4n-1)>article.in-index-small{
+		background-color: #fff;;
+	}
+}
+
+article.full{
+	header{
+		.clearfix();
+		display: block;
+		margin-bottom: 8px;
+		time{
+			float: right;
+			font-weight: bold;
+			font-family: Verdana;
+			margin-bottom: 16px;
+			&::before{
+				content: "Date - ";
+				font-family: @font-family-base;
+				font-weight: normal;
+			}
+		}
+	}
+	main{
+		background-color: #fff;
+		padding: 16px 24px;
+	}
+	@media screen and (max-width: @screen-xs-max){
+		header{
+			time{
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}
+/*
+=== === === === === === ===
+_page_specific
+=== === === === === === ===
+*/
+
+// Homepage sections
+main section{
+	padding-top: 36px;
+	padding-bottom: 44px;
+}
+
+section.home-gallery{
+	background-color: @cajm-blue-grey;
+	background-image: url(../../../images/gallery-bg.png);
+	h2, .h2{
+		color: #fff;
+	}
+	.gallery-images{
+		img{
+			margin-bottom: @pbv;
+		}
+	}
+}
+
+section.recent-news{
+
+}
+
+/*
+=== === === === === === ===
+_media_queries
+=== === === === === === ===
+*/
+
+/* Max width: */
+@media screen and (max-width: @screen-md-max){}
+@media screen and (max-width: @screen-sm-max){}
+@media screen and (max-width: @screen-xs-max){}
+
+/* Min width */;
+@media screen and (min-width: @screen-lg){}
+@media screen and (min-width: @screen-md){}
+@media screen and (min-width: @screen-sm){}
+
+/* Specific widths: */
+@media screen and (min-width: @screen-md) and (max-width: @screen-md-max){}
+@media screen and (min-width: @screen-sm) and (max-width: @screen-sm-max){}
+
+/* Orientation: */
+@media screen (orientation: portrait){}
+@media screen (orientation: landscape){}

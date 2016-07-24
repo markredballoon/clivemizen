@@ -102,6 +102,36 @@
             <main>
               <p>This is a starting page for the development of theme pages.</p>
               <p>The core styles and scripts are loaded and the barebones of the navigation is in the html.</p>
+              <div id="attachment_id_wp" style="width: 100%" class="wp-caption alignnone">
+  							<img class="size-large wp-image-id" src="demo-files/images/placeholder.png" alt="">
+  							<p class="wp-caption-text">Large image with caption.</p>
+  						</div>
+              <p>Lorem ipsum dolor sit amet, adipiscing placerat morbi eleifend, aenean eu elementum sed etiam sapien luctus. Nullam taciti risus convallis etiam, etiam arcu placerat cras adipiscing mi, lacus eu lorem ut sagittis elit, rhoncus ullamcorper sed. Tincidunt ut amet, accumsan wisi orci felis eros nunc metus, blandit quis volutpat nostra. Morbi pharetra, mi nonummy, lobortis sociis malesuada, vivamus in quis eleifend. Dictum condimentum eleifend a lacus. Dui wisi in. Amet duis tristique vel lacus, proin felis, pulvinar nascetur proin justo et. Inceptos a vestibulum minus, et dui repellendus arcu pellentesque, placerat mattis inceptos vivamus euismod feugiat. Odio ac.</p>
+              <div id="attachment_id_wp" class="wp-caption alignright">
+  							<img class=" wp-image-id" src="demo-files/images/placeholder.png" width="300px" height="300px" alt="">
+  							<p class="wp-caption-text">Medium Right aligned image with caption.</p>
+  						</div>
+              <p>Lorem ipsum dolor sit amet, adipiscing placerat morbi eleifend, aenean eu elementum sed etiam sapien luctus. Nullam taciti risus convallis etiam, etiam arcu placerat cras adipiscing mi, lacus eu lorem ut sagittis elit, rhoncus ullamcorper sed. Tincidunt ut amet, accumsan wisi orci felis eros nunc metus, blandit quis volutpat nostra. Morbi pharetra, mi nonummy, lobortis sociis malesuada, vivamus in quis eleifend. Dictum condimentum eleifend a lacus. Dui wisi in. Amet duis tristique vel lacus, proin felis, pulvinar nascetur proin justo et. Inceptos a vestibulum minus, et dui repellendus arcu pellentesque, placerat mattis inceptos vivamus euismod feugiat. Odio ac.</p>
+              <p>
+                <!-- brought in by the back end -->
+                <div class="video-base type--embed youtube" id="video_base_0">
+                    <div class="video-content" onclick="VBplayVideo(this)">
+                        <div class="video-title overlayed">
+                            <h4>Title goes here</h4>
+                        </div>
+                        <div class="iframe-wrap" style="padding-bottom: 56.25%;"><!-- this padding is worded out from the oembed info -->
+                            <iframe width="800" height="800" src="https://www.youtube.com/embed/B_YQ8xox4pk?feature=oembed&amp;enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
+                            <div class="video-thumbnail" style="background-image:url(http://dev.golf.mizunoeurope.com/wp-content/uploads/2016/04/luke-forging-video-thumb-500x300.jpg);"><div class="play-icon"></div></div>
+                        </div><!--iframe-wrap outer-->
+                    </div><!--video-content-->
+                    <div class="description">
+                        <p>This is where the description will go.</p>
+                    </div>
+                </div>
+              </p>
+
+              <p>Lorem ipsum dolor sit amet, adipiscing placerat morbi eleifend, aenean eu elementum sed etiam sapien luctus. Nullam taciti risus convallis etiam, etiam arcu placerat cras adipiscing mi, lacus eu lorem ut sagittis elit, rhoncus ullamcorper sed. Tincidunt ut amet, accumsan wisi orci felis eros nunc metus, blandit quis volutpat nostra. Morbi pharetra, mi nonummy, lobortis sociis malesuada, vivamus in quis eleifend. Dictum condimentum eleifend a lacus. Dui wisi in. Amet duis tristique vel lacus, proin felis, pulvinar nascetur proin justo et. Inceptos a vestibulum minus, et dui repellendus arcu pellentesque, placerat mattis inceptos vivamus euismod feugiat. Odio ac.</p>
+
             </main>
           </article>
         </div>
@@ -155,6 +185,10 @@
 	</div>
 </noscript>
 */?>
+
+
+<script src="../wp-content/plugins/video-base/js/video-base.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="../wp-content/plugins/video-base/css/video-base.min.css" media="screen" title="no title" charset="utf-8">
 
 </body>
 </html>

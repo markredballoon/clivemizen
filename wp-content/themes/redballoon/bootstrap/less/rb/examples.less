@@ -1,0 +1,300 @@
+/*
+These styles are for the examples on the examples.php page
+
+Content:
+
+styles for the demo elements
+demos of styleTransition mixin
+example of css animations
+example of fade between images using css. With/without mixin
+
+*/
+
+/*
+Styles for the demo elements:
+*/
+.demo{
+	.aspect-ratio(4, 3);
+	margin-bottom: 12px;
+	.bg{
+		background-color:#222;
+	}
+	.moving-element{
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		background: #eee;
+		top: 0;
+		left: 0;
+	}
+}
+/* demo of a backgroung color. Pressing the button adds the transition class */
+.demo-background{
+	&.transition .bg{
+		background-color:#999;
+	}
+	.bg {
+		.styleTransition(1.2s, 0.2s, background);
+	}
+}
+/* demo of an element moving on button press. Pressing the button adds the transition class */
+.demo-position{
+	position: relative;
+	.moving-element{
+		.styleTransition(1.2s, 0);
+	}
+	&.transition .moving-element{
+		top: calc(100% - 12px);
+		left: calc(100% - 12px);
+	}
+}
+
+/* demo of a complex transform on button press. Pressing the button adds the transition class */
+.demo-transform{
+	position: relative;
+	.moving-element{
+		.styleTransition(1.2s, 0, transform);
+	}
+	&.transition .moving-element{
+		transform: translateX(150px) translateY(80px) scale(8) rotate(720deg);
+	}
+}
+
+/*
+Example of how to write animations:
+	Firstly, create the keyframes
+ */
+@keyframes animation1{
+	0% { bottom: 0; }
+	20% { bottom: 120px; }
+	40% { bottom: 0; }
+	60% { bottom: 80px; }
+	80%	{ bottom: 0; }
+	90% { bottom: 20px; }
+	100% { bottom: 0;}
+}
+/*
+Add the name of the animation, the duration, the iteration count, and the timing function.
+If writing in plain css then this requires a lot of prefixing. Bootstrap auto-prefixes as it compiles however.
+*/
+.demo-animation-1{
+	&.transition .moving-element{
+		animation-name: animation1;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		//animation-direction: alternate;
+		animation-timing-function:linear;
+	}
+	.moving-element{
+		top: auto;
+		bottom: 0;
+		left: calc(50% - 6px);
+	}
+}
+
+/* Another Example of how to write animations */
+@keyframes animation2{
+	0% {background-image:linear-gradient(to top right, #999, #222);}
+	20% {background-image:linear-gradient(to top left, #999, #222);}
+	40% {background-image:linear-gradient(to bottom left, #999, #222);}
+	60% {background-image:linear-gradient(to bottom right, #999, #222);}
+	80% {background-image:linear-gradient(to top right, #999, #222);}
+	100% {background-image:linear-gradient(to top right, #999, #222);}
+}
+.demo-animation-2{
+	&.transition .bg{
+		animation-name: animation2;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		animation-timing-function:ease-in;
+	}
+}
+
+
+
+
+/*
+Linear gradient hover state change
+Also works as a way to fade between images
+Normally not possible with a standard transition
+*/
+
+/* This is an example of how to use the hoverImageTransition mixin to make fading between images easier to write */
+
+/* Without mixin */
+.demo-lgrad-hover{
+	.bg{
+		&:after, &:before{
+			.smoothTransition(0.5s);
+			.abs-cover();
+			content: " ";
+		}
+		&:after{
+			background-image: linear-gradient(to top, rgba(210, 210, 210, 1), rgba(0, 0, 0, 0));
+			opacity: 0;
+		}
+		&:before{
+			background-image: linear-gradient(to bottom, rgba(210, 210, 210, 1), rgba(0, 0, 0, 0));
+			opacity: 1;
+		}
+	}
+}
+.demo-lgrad-hover:hover{
+	.bg{
+		&:after{
+			opacity: 1;
+		}
+		&:before{
+			opacity: 0;
+		}
+	}
+}
+/* using mixin */
+.demo-lgrad-hover-2{
+	.hoverImageTransition( linear-gradient(to bottom, rgba(210, 210, 210, 1), rgba(0, 0, 0, 0)), linear-gradient(to top, rgba(210, 210, 210, 1), rgba(0, 0, 0, 0)) );
+}
+
+/*
+Checkbox tabs:
+Pure css tabs. Needs to be developed.
+*/
+
+
+/* Styles for the footer underline demo */
+.footer-links{
+	text-align: center;
+	margin-bottom: 60px;
+
+
+	.underline-track{
+		overflow: visible;
+		margin-top: 10px;
+		clear: both;
+	}
+
+	/*Left align first element, centrally align second element, right align third element */
+	.footer-link{
+		display: block;
+		width: calc(29.16666667% - 8px);
+		text-decoration: none;
+		&:first-child{
+			float: left;
+		}
+		&:nth-child(2){
+			margin: auto;
+			display: inline-block;
+		}
+		&:nth-child(3){
+			float: right;
+		}
+	}
+
+	/*Title styles*/
+	.h2{
+		line-height: 40px;
+		letter-spacing: 0px;
+		font-size: 28px;
+		color: rgba(29, 169, 225, 0.89);
+	}
+	.cta-title{
+		margin-top: 20px;
+	}
+	/* Styles for image */
+	.cta-image{
+		background-position:center;
+		background-size: cover;
+		position: relative;
+		display: block;
+		overflow: hidden;
+		border:1px solid #fff;
+		img{
+			position: relative;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			transform: scale(1) translateZ(0);
+			transition: transform 0.8s;
+		}
+	}
+	.cta-info{
+		p{
+			margin: 5px 0 0;
+			color: black;
+			font-size: 16px;
+			line-height: 30px;
+		}
+	}
+}
+.underline-track{
+	margin-top: 4px;
+	width: 100%;
+	height: 1px;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	.underline-element{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 49px;
+		transform: translateZ(0);
+		opacity: 0;
+		background-color: pink;
+		display: block;
+		transition: opacity 0.1s, transform 10ms;
+		&.active{
+			opacity: 1;
+			transition: opacity 0.5s, transform 0.5s;
+		}
+	}
+}
+
+// Example of a list that has three equally spaced elements in a row that goes down to a 2 across list at smaller sizes.
+.three-across{
+	text-align: justify;
+	&::after{
+		content: ' ';
+		display: inline-block;
+		width: 100%;
+	}
+}
+.three-across .item{
+	display: inline-block;
+	width: 25%;
+	margin-bottom: 10px;
+	float: none;
+	vertical-align: top;
+	.square{
+		padding-bottom: 100%;
+		background-color: green;
+	}
+}
+@media screen and (max-width:@screen-xs-max){
+	.three-across .item{
+		width: 45%;
+	}
+}
+
+.bootstrap-centered{
+	text-align: justify;
+	font-size: 0;
+	&::after{
+		content: ' ';
+		display: inline-block;
+		width: 100%;
+	}
+	>*{
+		font-size: 1rem;
+	}
+	.item{
+		margin-bottom: 10px;
+		float: none;
+		vertical-align: top;
+		display: inline-block;
+	}
+	.square{
+		padding-bottom: 100%;
+		background-color: purple;
+	}
+}

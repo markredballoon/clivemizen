@@ -87,7 +87,8 @@
 <main id="main">
 
   <div class="hero">
-    <div class="bg" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=Hero&w=1200&h=400);"></div>
+    <!-- <div class="bg" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=Hero&w=1200&h=400);"></div> -->
+    <div class="bg" style="background-image:url(images/placeholders/opera-house.jpg);"></div>
   </div>
 
   <section class="about-me">

@@ -25,6 +25,7 @@ Contents:
 ///////	echo apply_filters('the_content', _get_project_info('0', $post->post_content)); // will output content with wordpress additions (p tags, shortcodes etc.)
 ///////
 /////// will return "content0"
+add_theme_support( 'post-thumbnails' ); 
 
 function _get_project_info( $what, $info ) {
 	$info = explode('<!--more-->', $info);
@@ -61,7 +62,7 @@ function _get_project_info( $what, $info ) {
 Add additional thumbnails to a page or post.
 ////// add code examples below, its about 3 lines.
 */
-if (class_exists('MultiPostThumbnails')) {
+/*if (class_exists('MultiPostThumbnails')) {
 
 new MultiPostThumbnails(array(
 'label' => 'Ladies Club Image',
@@ -69,7 +70,7 @@ new MultiPostThumbnails(array(
 'post_type' => 'page'
  ) );
 
-}
+}*/
 
 /**
  * Register Widget Areas
@@ -607,184 +608,4 @@ class wp_bootstrap_navwalker_two extends Walker_Nav_Menu {
 			echo $fb_output;
 		}
 	}
-}
-
-class Thumbnail_Walker extends Walker_Nav_Menu
-{
-/**
- * Start the element output.
- *
- * @param  string $output Passed by reference. Used to append additional content.
- * @param  object $item   Menu item data object.
- * @param  int $depth     Depth of menu item. May be used for padding.
- * @param  array $args    Additional strings.
- * @return void
- */
- function start_el(&$output, $item, $depth, $args)
- {
-    $classes     = empty ( $item->classes ) ? array () : (array) $item->classes;
-    $class_names = join(
-        ' '
-    ,   apply_filters(
-            'nav_menu_css_class'
-        ,   array_filter( $classes ), $item
-        )
-    );
-
-    ! empty ( $class_names )
-        and $class_names = ' class="'. esc_attr( $class_names ) . '"';
-
-    $output .= "<li id='menu-item-$item->ID' $class_names>";
-
-if ( $item->attr_title == 'toplevel') {
-	$itemurl = '#';
-} else {
-	$itemurl = esc_attr($item->url);
-}
-
-
-    $attributes  = '';
-
-    ! empty( $item->attr_title )
-        and $attributes .= ' title="'  . esc_attr( $item->attr_title ) .'"';
-    ! empty( $item->target )
-        and $attributes .= ' target="' . esc_attr( $item->target     ) .'"';
-    ! empty( $item->xfn )
-        and $attributes .= ' rel="'    . esc_attr( $item->xfn        ) .'"';
-    ! empty( $item->url )
-        and $attributes .= ' href="'   . $itemurl .'"';
-
-
-$title = apply_filters( 'the_title', $item->title, $item->ID );
-
-if ( $item->attr_title == 'ladies') {
-	$thumbnail = MultiPostThumbnails::get_the_post_thumbnail(get_post_type($item->object_id), 'ladies-image', $item->object_id);
-} else {
-	$thumbnail = '';
-	if ( has_post_thumbnail( $item->object_id, 'full' ) ) {
-		$thumbnail = get_the_post_thumbnail( $item->object_id, 'full' );
-	}
-}
-
-
-if($depth != 0)
-{
-        $linktitle = '<span class="nav-title">' . $title . '</span>';
-} else {
-		$linktitle = $title;
-}
-
-	$strapline = apply_filters('the_content', _get_project_info('1', $item->post_content));
-
-    $item_output = $args->before
-        . "<a $attributes>"
-        . $args->link_before
-        . $thumbnail
-        . $linktitle
-     // . '<span class="nav-slogan">' . $strapline . '</span>'
-        . '</a> '
-        . $args->link_after
-        . $args->after;
-
-    // Since $output is called by reference we don't need to return anything.
-    $output .= apply_filters(
-        'walker_nav_menu_start_el'
-    ,   $item_output
-    ,   $item
-    ,   $depth
-    ,   $args
-    );
-   }
-}
-
-
-/**
- * Manage Contact Form 7 Scripts (only display on contact form pages)
-// Set pages below where the Contact Form 7 Scripts sit.
-if ( ! is_page('register') && ! is_page('contact') ) {
-	add_filter( 'wpcf7_do_enqueue_scripts', '__return_empty_array' );
-}
-// couldnt get working??
- */
-
-/**
- * Manage WooCommerce styles and scripts.
- */
-function grd_woocommerce_script_cleaner() {
-
-	// Remove the generator tag
-	remove_action( 'wp_head', array( $GLOBALS['woocommerce'], 'generator' ) );
-	// Unless we're in the store, remove all the cruft!
-	if ( ! is_woocommerce() && ! is_cart() && ! is_checkout() ) {
-		wp_dequeue_style( 'woocommerce_frontend_styles' );
-		wp_dequeue_style( 'woocommerce-general');
-		wp_dequeue_style( 'woocommerce-layout' );
-		wp_dequeue_style( 'woocommerce-smallscreen' );
-		wp_dequeue_style( 'woocommerce_fancybox_styles' );
-		wp_dequeue_style( 'woocommerce_chosen_styles' );
-		wp_dequeue_style( 'woocommerce_prettyPhoto_css' );
-		wp_dequeue_style( 'select2' );
-		wp_dequeue_script( 'wc-add-payment-method' );
-		wp_dequeue_script( 'wc-lost-password' );
-		wp_dequeue_script( 'wc_price_slider' );
-		wp_dequeue_script( 'wc-single-product' );
-		wp_dequeue_script( 'wc-add-to-cart' );
-		wp_dequeue_script( 'wc-cart-fragments' );
-		wp_dequeue_script( 'wc-credit-card-form' );
-		wp_dequeue_script( 'wc-checkout' );
-		wp_dequeue_script( 'wc-add-to-cart-variation' );
-		wp_dequeue_script( 'wc-single-product' );
-		wp_dequeue_script( 'wc-cart' );
-		wp_dequeue_script( 'wc-chosen' );
-		wp_dequeue_script( 'woocommerce' );
-		wp_dequeue_script( 'prettyPhoto' );
-		wp_dequeue_script( 'prettyPhoto-init' );
-		wp_dequeue_script( 'jquery-blockui' );
-		wp_dequeue_script( 'jquery-placeholder' );
-		wp_dequeue_script( 'jquery-payment' );
-		wp_dequeue_script( 'fancybox' );
-		wp_dequeue_script( 'jqueryui' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'grd_woocommerce_script_cleaner', 99 );
-add_filter( 'woocommerce_enqueue_styles', '__return_false' );
-
-if( !function_exists( 'enqueue_scripts' ) ) {
-    function enqueue_scripts() {
-    	//Register our JS
-		wp_deregister_script('jquery');
-		wp_register_script('jquery', get_template_directory_uri() . '/js/jquery-1.11.0.min.js', true);
-		wp_register_script('ajax-load-more', get_template_directory_uri() . '/ajax-load-more/js/ajax-load-more.js', 'jquery', '1.0', true);
-
-		// Enqueue CSS
-		wp_enqueue_style( 'ajax-load-more-css', get_template_directory_uri() . '/ajax-load-more/css/ajax-load-more.css' );
-
-        // Enqueue our scripts
-    	wp_enqueue_script('jquery');
-    	wp_enqueue_script('ajax-load-more');
-    }
-
-    add_action('wp_enqueue_scripts', 'enqueue_scripts');
-}
-
-
-function disable_wp_emojicons() {
-  // all actions related to emojis
-  remove_action( 'admin_print_styles', 'print_emoji_styles' );
-  remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-  remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-  remove_action( 'wp_print_styles', 'print_emoji_styles' );
-  remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-  remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-  remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-  // filter to remove TinyMCE emojis
-  add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
-}
-add_action( 'init', 'disable_wp_emojicons' );
-function disable_emojicons_tinymce( $plugins ) {
-  if ( is_array( $plugins ) ) {
-    return array_diff( $plugins, array( 'wpemoji' ) );
-  } else {
-    return array();
-  }
 }

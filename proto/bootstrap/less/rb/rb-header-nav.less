@@ -20,6 +20,7 @@
 body>header{
 	min-height: @header-height-base;
 	background-color: @cajm-blue-dark;
+	background-image: url(../../../images/dark-bg.png);
 }
 
 
@@ -84,6 +85,9 @@ nav{
 			font-size: 0;
 			display: inline-block;
 			margin-left: 28px;
+			@media screen and (max-width: @screen-sm-max) and (min-width: @screen-sm-min){
+				margin-left: 16px;
+			}
 			a{
 				/* Add margins and paddings to this element */
 				display: block;
@@ -201,12 +205,14 @@ footer{
 		padding-top: 24px;
 		padding-bottom: 36px;
 		background-color: @cajm-blue-grey;
+		background-image: url(../../../images/gallery-bg.png);
 		@media screen and (max-width: @screen-xs-max){
 			padding-top: @pbv;
 		}
 	}
 	.legal{
 		background-color: @cajm-blue-dark;
+		background-image: url(../../../images/dark-bg.png);
 		color: #fff;
 		font-size: @font-size-small;
 		text-align: right;

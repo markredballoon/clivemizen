@@ -1,0 +1,88 @@
+/* CSS transitions used by the transition JS. */
+
+
+.fade-in-bottom{
+  transition: opacity 1.05s 0s linear, transform 1.05s 0s;
+  transform: translateZ(0);
+  &.before-transition{
+    transform: translateY(75%) translateZ(0);
+    opacity: 0;
+  }
+}
+
+.fade-in-top{
+  transition: opacity 1.05s 0s linear, transform 1.05s 0s;
+  transform: translateZ(0);
+  &.before-transition{
+    transform: translateY(-100%) translateZ(0);
+    opacity: 0;
+  }
+}
+
+.fade-in-right{
+  transition: opacity 1.05s 0s linear, transform 1.05s 0s;
+  transform: translateZ(0);
+  &.before-transition{
+    transform: translateX(100px) translateZ(0);
+    opacity: 0;
+  }
+}
+
+.fade-in-left{
+  transition: opacity 1.05s 0s linear, transform 1.05s 0s;
+  transform: translateZ(0);
+  &.before-transition{
+    transform: translateX(-100px) translateZ(0);
+    opacity: 0;
+  }
+}
+
+.fade-out-bottom{
+  transition: opacity 1.05s 0s linear, transform 1.05s 0s;
+  transform: translateZ(0);
+  &.after-transition{
+    transform: translateY(75%) translateZ(0);
+    opacity: 0;
+  }
+}
+
+.fade-out-top{
+  transition: opacity 1.05s 0s linear, transform 1.05s 0s;
+  transform: translateZ(0);
+  &.after-transition{
+    transform: translateY(-100%) translateZ(0);
+    opacity: 0;
+  }
+}
+
+.fade-out-right{
+  transition: opacity 1.05s 0s linear, transform 0.95s 0s;
+  transform: translateZ(0);
+  &.after-transition{
+    transform: translateX(100px) translateZ(0);
+    opacity: 0;
+  }
+}
+
+.fade-out-left{
+  transition: opacity 1.05s 0s linear, transform 1.05s 0s;
+  transform: translateZ(0);
+  &.after-transition{
+    transform: translateX(-100px) translateZ(0);
+    opacity: 0;
+  }
+}
+.fade-in{
+    opacity: 1;
+    transition: opacity 1.05s;
+    &.before-transition{
+      opacity: 0;
+    }
+}
+.fade-out{
+    opacity: 1;
+    transition: opacity 1.05s;
+    &.after-transition{
+      opacity: 0;
+    }
+}

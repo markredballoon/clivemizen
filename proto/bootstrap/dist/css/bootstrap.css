@@ -6020,6 +6020,22 @@ article .h6,
 .article-content .h6 {
   font-size: 12px;
 }
+article img.size-large,
+.article-content img.size-large {
+  height: auto;
+
+  widows: 100%;
+}
+article .type--embed,
+.article-content .type--embed {
+  float: left;
+}
+article .wp-caption-text,
+.article-content .wp-caption-text {
+  margin: 8px 0 12px;
+  text-align: center;
+  opacity: .9;
+}
 /* Red balloon LESS files */
 /* Custom utility classes */
 /* Utility Classes developed by red balloon */
@@ -6431,6 +6447,8 @@ If the hero height changes at different screen sizes:
 }
 .hero .bg {
   z-index: 1;
+  -webkit-box-shadow: inset 0 13px 10px -10px rgba(0, 0, 0, .5);
+          box-shadow: inset 0 13px 10px -10px rgba(0, 0, 0, .5);
 }
 .hero .title {
   position: absolute;
@@ -6595,6 +6613,7 @@ Mostly uses the same styles as a regular bootstrap carousel by default
 body > header {
   min-height: 64px;
   background-color: #021645;
+  background-image: url(../../../images/dark-bg.png);
 }
 /* Logo */
 .logo {
@@ -6664,6 +6683,11 @@ nav ul li {
   margin-left: 28px;
   /* Stuctural, try to avoid adding many styles to this element */
   font-size: 0;
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  nav ul li {
+    margin-left: 16px;
+  }
 }
 nav ul li a {
   /* Add margins and paddings to this element */
@@ -6787,6 +6811,7 @@ footer .social {
   padding-top: 24px;
   padding-bottom: 36px;
   background-color: #4e5b79;
+  background-image: url(../../../images/gallery-bg.png);
 }
 @media screen and (max-width: 767px) {
   footer .social {
@@ -6802,6 +6827,7 @@ footer .legal {
   color: #fff;
   text-align: right;
   background-color: #021645;
+  background-image: url(../../../images/dark-bg.png);
 }
 footer .legal p {
   margin: 0;
@@ -7672,6 +7698,11 @@ footer {
 _general_styles
 === === === === === === ===
 */
+body {
+  background-color: #fdfdfd;
+  background-image: url(../../../images/body-bg.png);
+  background-attachment: fixed;
+}
 a {
   /* Adds opacity, background-color, and color transitions. The base transition speed is 0.5s */
   /*						Attribute 					Speed 					*/
@@ -7736,11 +7767,13 @@ _Reused_classes
 .button:hover {
   color: #fff;
   background-color: #021645;
+  background-image: url(../../../imges/dark-bg.png);
 }
 article.in-index-large {
   width: 100%;
   padding: 16px 24px;
   margin-bottom: 24px;
+  background-color: #fff;
   border: 2px solid #021645;
 }
 article.in-index-large header {
@@ -7798,6 +7831,7 @@ article.in-index-small {
   width: 100%;
   padding: 16px 162px 16px 24px;
   margin-bottom: 24px;
+  background-color: #fff;
 }
 article.in-index-small header {
   display: block;
@@ -7900,6 +7934,10 @@ article.full header time::before {
   font-weight: normal;
   content: "Date - ";
 }
+article.full main {
+  padding: 16px 24px;
+  background-color: #fff;
+}
 @media screen and (min-width: 1024px) {
   article.full header h1,
   article.full header .h1 {
@@ -7934,6 +7972,7 @@ main section {
 }
 section.home-gallery {
   background-color: #4e5b79;
+  background-image: url(../../../images/gallery-bg.png);
 }
 section.home-gallery h2,
 section.home-gallery .h2 {
