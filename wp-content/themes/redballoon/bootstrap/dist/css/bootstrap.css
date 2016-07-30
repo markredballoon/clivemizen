@@ -1142,7 +1142,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-family: Ubuntu, "Ubuntu-font", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.25;
   color: #4a4a4a;
@@ -4815,7 +4815,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-family: Ubuntu, "Ubuntu-font", Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: normal;
@@ -4934,7 +4934,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-family: Ubuntu, "Ubuntu-font", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: normal;
@@ -5611,8 +5611,9 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Copperplate", Georgia, "Times New Roman", Times, serif;
+  font-family: Copperplate, "Copperplate Gothic", "Copperplate Gothic Light", "Times New Roman", Times, serif;
   font-weight: bold;
+  font-variant: small-caps;
   line-height: normal;
   color: #021645;
 }
@@ -6668,9 +6669,6 @@ body > header {
   /* Styles when menu is open */
   opacity: .4;
 }
-.nav-toggle.open:hover {
-  opacity: 1;
-}
 /* Default nav styles */
 nav {
   float: right;
@@ -6695,7 +6693,7 @@ nav ul li a {
   display: block;
   width: 132px;
   padding: 3px 16px 1px;
-  font-family: "Copperplate", Georgia, "Times New Roman", Times, serif;
+  font-family: Copperplate, "Copperplate Gothic", "Copperplate Gothic Light", "Times New Roman", Times, serif;
   font-size: 20px;
   font-weight: bold;
   line-height: 28px;
@@ -6762,7 +6760,6 @@ nav ul.v-list > li {
   }
   #main-nav ul {
     min-height: 100vh;
-    padding-top: 22px;
     margin: 0;
   }
   #main-nav ul li {
@@ -6821,17 +6818,23 @@ footer .social {
 }
 footer .legal {
   padding-top: 16px;
-  padding-right: 8px;
+  padding-right: 16px;
   padding-bottom: 16px;
-  padding-left: 8px;
+  padding-left: 16px;
   font-size: 12px;
-  color: #fff;
+  color: #7b8499;
   text-align: right;
   background-color: #021645;
   background-image: url(../../../images/dark-bg.png);
 }
 footer .legal p {
   margin: 0;
+}
+footer .legal a:hover,
+footer .legal a:focus,
+footer .legal a:active {
+  color: #24675c;
+  text-decoration: underline;
 }
 @media screen and (max-width: 1023px) {
   footer .legal {
@@ -6851,17 +6854,47 @@ ul.social-icons li {
 }
 ul.social-icons li a {
   display: block;
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: contain;
-          background-size: contain;
-  border: 4px solid #021645;
+  -webkit-background-size: 60% auto;
+          background-size: 60% auto;
+  border: 3px solid #021645;
   border-radius: 50%;
+  -webkit-transform: scale(.9);
+      -ms-transform: scale(.9);
+       -o-transform: scale(.9);
+          transform: scale(.9);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+       -o-transform-origin: center;
+          transform-origin: center;
 }
 ul.social-icons li a:hover {
   background-color: #fff;
+  -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .3);
+          box-shadow: 0 1px 1px 1px rgba(0, 0, 0, .3);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+       -o-transform: scale(1);
+          transform: scale(1);
+}
+ul.social-icons a.icon-facebook {
+  background-image: url(../../../images/icons/facebook.png);
+  background-image: url(../../../images/icons/facebook.svg), blank;
+}
+ul.social-icons a.icon-twitter {
+  background-image: url(../../../images/icons/twitter.png);
+  background-image: url(../../../images/icons/twitter.svg), blank;
+}
+ul.social-icons a.icon-linkedin {
+  background-image: url(../../../images/icons/linkedin.png);
+  background-image: url(../../../images/icons/linkedin.svg), blank;
+}
+ul.social-icons a.icon-email {
+  background-image: url(../../../images/icons/email.png);
+  background-image: url(../../../images/icons/email.svg), blank;
 }
 /*
 @media screen and (max-width: [breakpoint] ;){
@@ -7768,7 +7801,14 @@ _Reused_classes
 .button:hover {
   color: #fff;
   background-color: #021645;
-  background-image: url(../../../imges/dark-bg.png);
+  background-image: url(../../../images/dark-bg.png);
+}
+article main ul {
+  list-style-position: inside;
+  list-style-type: disc;
+}
+article main ul li {
+  margin-bottom: 3px;
 }
 article.in-index-large {
   width: 100%;
@@ -7928,24 +7968,20 @@ article.full header:after {
 }
 article.full header time {
   float: right;
+  width: 100%;
   margin-bottom: 16px;
   font-family: Verdana;
   font-weight: bold;
+  text-align: center;
 }
 article.full header time::before {
-  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-family: Ubuntu, "Ubuntu-font", Helvetica, Arial, sans-serif;
   font-weight: normal;
   content: "Date - ";
 }
 article.full main {
   padding: 16px 24px;
   background-color: #fff;
-}
-@media screen and (max-width: 767px) {
-  article.full header time {
-    width: 100%;
-    text-align: center;
-  }
 }
 /*
 === === === === === === ===
@@ -7966,6 +8002,51 @@ section.home-gallery .h2 {
 }
 section.home-gallery .gallery-images img {
   margin-bottom: 16px;
+}
+section.home-gallery .asg-images {
+  text-align: justify;
+}
+section.home-gallery .asg-images::after {
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  content: ' ';
+}
+section.home-gallery .asg-image {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+}
+section.links ul {
+  list-style: disc;
+  list-style-position: inside;
+}
+@media screen and (min-width: 768px) {
+  section.links .links-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+  }
+  section.links .links-divider {
+    float: left;
+    padding: 18px;
+    border-right: 2px solid #4e5b79;
+
+    -webkit-flex-basis: 33%;
+    -ms-flex-preferred-size: 33%;
+            flex-basis: 33%;
+  }
+  section.links .links-divider:last-child {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  section.links h3,
+  section.links .h3 {
+    text-align: left;
+    text-indent: 24px;
+  }
 }
 /*
 === === === === === === ===

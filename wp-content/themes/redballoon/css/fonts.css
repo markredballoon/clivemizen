@@ -13,3 +13,57 @@ src:url("Fonts/9078f77e-dddf-495b-a468-f03b3b7aa12c.eot?#iefix") format("eot"),u
 	font-stretch: normal;
 }
 */
+
+@font-face {
+	font-family: 'Copperplate';
+	src: url('fonts/Copperplate-Bold.eot');
+	src: url('fonts/Copperplate-Bold.eot?#iefix') format('embedded-opentype'),
+		url('fonts/Copperplate-Bold.woff') format('woff'),
+		url('fonts/Copperplate-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu-font';
+    src: url('fonts/ubuntu-bold-webfont.eot');
+    src: url('fonts/ubuntu-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ubuntu-bold-webfont.woff2') format('woff2'),
+         url('fonts/ubuntu-bold-webfont.woff') format('woff'),
+         url('fonts/ubuntu-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'fonts/Ubuntu-font';
+    src: url('fonts/ubuntu-bolditalic-webfont.eot');
+    src: url('fonts/ubuntu-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ubuntu-bolditalic-webfont.woff2') format('woff2'),
+         url('fonts/ubuntu-bolditalic-webfont.woff') format('woff'),
+         url('fonts/ubuntu-bolditalic-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+
+}
+@font-face {
+    font-family: 'Ubuntu-font';
+    src: url('fonts/ubuntu-regular-webfont.eot');
+    src: url('fonts/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ubuntu-regular-webfont.woff2') format('woff2'),
+         url('fonts/ubuntu-regular-webfont.woff') format('woff'),
+         url('fonts/ubuntu-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Ubuntu-font';
+    src: url('fonts/ubuntu-italic-webfont.eot');
+    src: url('fonts/ubuntu-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ubuntu-italic-webfont.woff2') format('woff2'),
+         url('fonts/ubuntu-italic-webfont.woff') format('woff'),
+         url('fonts/ubuntu-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+
+}

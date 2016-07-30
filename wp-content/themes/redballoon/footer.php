@@ -16,27 +16,18 @@
   </section><!-- social -->
 
   <section class="legal">
-    <p>Copyright (c) 2016 Copyright Holder All Rights Reserved.</p>
+    <p>If you would like to get in touch by email, please send a message to <a href="mailto:info@clivemizen.com">info@clivemizen.com</a>.</p>
   </section><!-- legal -->
 
 </footer>
+  <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery-1.11.3.min.js"></script>
+  <?
+  wp_register_script( 'bootstrap-scripts', get_bloginfo( 'template_url' ).'/bootstrap/dist/js/bootstrap.min.js', 'jQuery' );
+  wp_register_script( 'custom-scripts', get_bloginfo( 'template_url' ).'/js/custom.js', 'jQuery' );
 
-
-	<!-- Javascripts -->
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="<?php bloginfo( 'template_url' ); ?>/bootstrap/dist/js/bootstrap.min.js"></script>
-
-	<!-- Twitter Feed -->
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/tweets.min.js"></script>
-
-	<!-- custom js file -->
-	<script src="<?php bloginfo( 'template_url' ); ?>/js/custom.js"></script>
-
-    <!-- Column Equalizer -->
-    <script src="<?php bloginfo( 'template_url' ); ?>/js/col-equalizer-ppj.min.js" type="text/javascript" charset="utf-8"></script>
-
-	<!-- Analytics code go here-->
+  wp_enqueue_script('bootstrap-scripts');
+  wp_enqueue_script('custom-scripts');
+  ?>
 
 <?php wp_footer(); ?>
 </body>

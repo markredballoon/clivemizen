@@ -37,21 +37,9 @@
 
 
         <div class="row gallery-images">
-
-          <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-2 col-lg-3 col-lg-offset-0">
-            <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=gallery&w=300&h=300" alt="" />
+          <div class="col-xs-10 col-xs-offset-1">
+            <?=do_shortcode('[awesome-gallery id="26"][/awesome-gallery]')?>
           </div>
-          <div class="col-xs-5 col-sm-4 col-md-2 col-lg-3">
-            <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=gallery&w=300&h=300" alt="" />
-          </div>
-          <div class="col-xs-5 col-xs-offset-1 col-sm-4 col-sm-offset-2 col-md-2 col-md-offset-0 col-lg-3">
-            <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=gallery&w=300&h=300" alt="" />
-          </div>
-          <div class="col-xs-5 col-sm-4 col-md-2 col-lg-3">
-            <img src="https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=gallery&w=300&h=300" alt="" />
-          </div>
-
-          <?=apply_filters( 'content', _get_project_info( '2', $post->post_content ))?>
 
         </div><!--gallery-images-->
 
