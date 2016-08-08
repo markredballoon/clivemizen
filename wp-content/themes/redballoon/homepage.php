@@ -21,7 +21,7 @@
             <img src="<?=_get_project_info( '1', $post->post_content )?>" alt="" />
           </div>
           <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6">
-            <?=apply_filters( 'content', _get_project_info( '0', $post->post_content ))?>
+            <?=apply_filters( 'the_content', _get_project_info( '0', $post->post_content ))?>
           </div>
       	</div>
       </div>
