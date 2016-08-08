@@ -7,9 +7,9 @@
       </div><!-- sub-title -->
       <div class="row">
         <ul class="social-icons">
-          <li><a class="icon-facebook" href="#.">Facebook</a></li>
-          <li><a class="icon-linkedin" href="#.">LinkedIn</a></li>
-          <li><a class="icon-email" href="#.">Email</a></li>
+          <li><a class="icon-facebook" href="https://www.facebook.com/clive.mizen">Facebook</a></li>
+          <li><a class="icon-linkedin" href="https://uk.linkedin.com/in/clive-mizen-24b39942">LinkedIn</a></li>
+          <li><a class="icon-email" href="mailto:info@clivemizen.com">Email</a></li>
         </ul><!-- social-icons -->
       </div><!-- row -->
     </div>
@@ -22,9 +22,11 @@
 </footer>
   <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery-1.11.3.min.js"></script>
   <?
-  wp_register_script( 'bootstrap-scripts', get_bloginfo( 'template_url' ).'/bootstrap/dist/js/bootstrap.min.js', 'jQuery' );
-  wp_register_script( 'custom-scripts', get_bloginfo( 'template_url' ).'/js/custom.js', 'jQuery' );
+  wp_register_script('jQuery', get_bloginfo('template_url').'/js/jquery-1.11.3.min.js' );
+  wp_register_script( 'bootstrap-scripts', get_bloginfo( 'template_url' ).'/bootstrap/dist/js/bootstrap.min.js', array('jQuery') );
+  wp_register_script( 'custom-scripts', get_bloginfo( 'template_url' ).'/js/custom.js', array('jQuery') );
 
+  wp_enqueue_script('jQuery')
   wp_enqueue_script('bootstrap-scripts');
   wp_enqueue_script('custom-scripts');
   ?>
