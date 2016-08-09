@@ -67,3 +67,78 @@ src:url("Fonts/9078f77e-dddf-495b-a468-f03b3b7aa12c.eot?#iefix") format("eot"),u
     font-style: italic;
 
 }
+
+
+
+@font-face {
+    font-family: 'kirsty';
+    src: url('fonts/kirsty_bd_it-webfont.eot');
+    src: url('fonts/kirsty_bd_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/kirsty_bd_it-webfont.woff2') format('woff2'),
+         url('fonts/kirsty_bd_it-webfont.woff') format('woff'),
+         url('fonts/kirsty_bd_it-webfont.ttf') format('truetype'),
+         url('fonts/kirsty_bd_it-webfont.svg#kirstybold_italic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'kirsty';
+    src: url('fonts/kirsty_bd-webfont.eot');
+    src: url('fonts/kirsty_bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/kirsty_bd-webfont.woff2') format('woff2'),
+         url('fonts/kirsty_bd-webfont.woff') format('woff'),
+         url('fonts/kirsty_bd-webfont.ttf') format('truetype'),
+         url('fonts/kirsty_bd-webfont.svg#kirstybold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'kirstyink';
+    src: url('fonts/kirsty_ink-webfont.eot');
+    src: url('fonts/kirsty_ink-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/kirsty_ink-webfont.woff2') format('woff2'),
+         url('fonts/kirsty_ink-webfont.woff') format('woff'),
+         url('fonts/kirsty_ink-webfont.ttf') format('truetype'),
+         url('fonts/kirsty_ink-webfont.svg#kirstyink') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'kirsty';
+    src: url('fonts/kirsty_rg_it-webfont.eot');
+    src: url('fonts/kirsty_rg_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/kirsty_rg_it-webfont.woff2') format('woff2'),
+         url('fonts/kirsty_rg_it-webfont.woff') format('woff'),
+         url('fonts/kirsty_rg_it-webfont.ttf') format('truetype'),
+         url('fonts/kirsty_rg_it-webfont.svg#kirstyitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+@font-face {
+    font-family: 'kirsty';
+    src: url('fonts/kirsty_rg-webfont.eot');
+    src: url('fonts/kirsty_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/kirsty_rg-webfont.woff2') format('woff2'),
+         url('fonts/kirsty_rg-webfont.woff') format('woff'),
+         url('fonts/kirsty_rg-webfont.ttf') format('truetype'),
+         url('fonts/kirsty_rg-webfont.svg#kirstyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

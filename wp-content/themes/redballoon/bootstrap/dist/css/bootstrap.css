@@ -5611,7 +5611,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: Copperplate, "Copperplate Gothic", "Copperplate Gothic Light", "Times New Roman", Times, serif;
+  font-family: Copperplate, "Copperplate Gothic", "Copperplate Gothic Light", "kirsty", "Times New Roman", Times, serif;
   font-weight: bold;
   font-variant: small-caps;
   line-height: normal;
@@ -6649,8 +6649,8 @@ body > header {
   position: relative;
   display: block;
   float: right;
-  padding: 0;
-  margin: 15px 26px;
+  padding: 15px 26px;
+  margin: 0;
   background: none;
   border: none;
   border-radius: 0;
@@ -6693,7 +6693,7 @@ nav ul li a {
   display: block;
   width: 132px;
   padding: 3px 16px 1px;
-  font-family: Copperplate, "Copperplate Gothic", "Copperplate Gothic Light", "Times New Roman", Times, serif;
+  font-family: Copperplate, "Copperplate Gothic", "Copperplate Gothic Light", "kirsty", "Times New Roman", Times, serif;
   font-size: 20px;
   font-weight: bold;
   line-height: 28px;
@@ -8002,9 +8002,6 @@ section.home-gallery h2,
 section.home-gallery .h2 {
   color: #fff;
 }
-section.home-gallery .gallery-images img {
-  margin-bottom: 16px;
-}
 section.home-gallery .asg-images {
   text-align: justify;
 }
@@ -8050,19 +8047,78 @@ section.links ul {
     text-indent: 24px;
   }
 }
-.home-gallery .slideshowlink {
-  display: none;
+.ngg-galleryoverview {
+  padding: 27px 16px 11px;
+  margin: 0;
+  font-size: 0;
+  text-align: center;
+  background-color: #fff;
 }
-.home-gallery .ngg-gallery-thumbnail {
+.ngg-galleryoverview .ngg-gallery-thumbnail-box {
   position: relative;
   display: inline-block;
   float: none;
-  width: 24%;
+  width: 24.8%;
+  margin: 0 .1% 16px;
+  font-size: 0;
 }
-.home-gallery .ngg-gallery-thumbnail img {
+.ngg-galleryoverview .ngg-gallery-thumbnail {
+  position: relative;
+  float: none;
+  font-size: 16px;
+}
+.ngg-galleryoverview .ngg-gallery-thumbnail img {
+  position: relative;
   width: 100%;
   padding: 0;
+  margin: 0;
   border: none;
+  -webkit-transition: -webkit-transform .2s, -webkit-filter .2s, -webkit-transform .2s, filter .2s;
+       -o-transition:      -o-transform .2s, filter .2s;
+          transition:         transform .2s, filter .2s;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+       -o-transform-origin: center;
+          transform-origin: center;
+
+  will-change: transform;
+}
+.ngg-galleryoverview .ngg-clear {
+  display: inline-block;
+  width: 100%;
+  font-size: 0;
+}
+@media screen and (min-width: 768px) {
+  .ngg-galleryoverview .ngg-gallery-thumbnail img {
+            filter: grayscale(.25);
+    -webkit-transform: scale(.95);
+        -ms-transform: scale(.95);
+         -o-transform: scale(.95);
+            transform: scale(.95);
+
+    -webkit-filter: grayscale(.25);
+  }
+  .ngg-galleryoverview .ngg-gallery-thumbnail:hover img {
+            filter: grayscale(0);
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+
+    -webkit-filter: grayscale(0);
+  }
+}
+@media screen and (max-width: 767px) {
+  .ngg-galleryoverview .ngg-gallery-thumbnail-box {
+    width: 48%;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .ngg-galleryoverview .ngg-gallery-thumbnail-box {
+    width: 100%;
+  }
 }
 /*
 === === === === === === ===

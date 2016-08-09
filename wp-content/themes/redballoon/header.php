@@ -35,7 +35,7 @@
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/style.css?version=1" />
 	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
-  
+
   <?
   wp_register_script('jQuery', get_bloginfo('template_url').'/js/jquery-1.11.3.min.js' );
   wp_register_script( 'bootstrap-scripts', get_bloginfo( 'template_url' ).'/bootstrap/dist/js/bootstrap.min.js', array('jQuery') );
@@ -48,7 +48,7 @@
 
 </head>
 
-<body id="body">
+<body id="body" <?php body_class(); ?>>
 
 
   <header>
