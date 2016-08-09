@@ -31,6 +31,7 @@
 	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
 	<meta name="msapplication-TileColor" content="#254c75">
 	<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/style.css?version=1" />
