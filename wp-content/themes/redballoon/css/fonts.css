@@ -78,7 +78,7 @@ src:url("Fonts/9078f77e-dddf-495b-a468-f03b3b7aa12c.eot?#iefix") format("eot"),u
          url('fonts/kirsty_bd_it-webfont.woff') format('woff'),
          url('fonts/kirsty_bd_it-webfont.ttf') format('truetype'),
          url('fonts/kirsty_bd_it-webfont.svg#kirstybold_italic') format('svg');
-    font-weight: 700;
+    font-weight: 800;
     font-style: italic;
 
 }
@@ -94,7 +94,7 @@ src:url("Fonts/9078f77e-dddf-495b-a468-f03b3b7aa12c.eot?#iefix") format("eot"),u
          url('fonts/kirsty_bd-webfont.woff') format('woff'),
          url('fonts/kirsty_bd-webfont.ttf') format('truetype'),
          url('fonts/kirsty_bd-webfont.svg#kirstybold') format('svg');
-    font-weight: 700;
+    font-weight: 800;
     font-style: normal;
 
 }
@@ -110,7 +110,7 @@ src:url("Fonts/9078f77e-dddf-495b-a468-f03b3b7aa12c.eot?#iefix") format("eot"),u
          url('fonts/kirsty_ink-webfont.woff') format('woff'),
          url('fonts/kirsty_ink-webfont.ttf') format('truetype'),
          url('fonts/kirsty_ink-webfont.svg#kirstyink') format('svg');
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
 
 }
@@ -124,7 +124,7 @@ src:url("Fonts/9078f77e-dddf-495b-a468-f03b3b7aa12c.eot?#iefix") format("eot"),u
          url('fonts/kirsty_rg_it-webfont.woff') format('woff'),
          url('fonts/kirsty_rg_it-webfont.ttf') format('truetype'),
          url('fonts/kirsty_rg_it-webfont.svg#kirstyitalic') format('svg');
-    font-weight: normal;
+    font-weight: 700;
     font-style: italic;
 
 }
