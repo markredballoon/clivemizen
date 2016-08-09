@@ -4,7 +4,7 @@
 
 <main id="main">
   <div class="hero hero-small">
-    <div class="bg" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=55&bg=a8a8a8&txtclr=ffffff&txt=Hero&w=1200&h=400);"></div>
+      <div class="bg" style="background-image:url(<?=wp_get_attachment_image_src(get_post_thumbnail_id(get_the_id()), 'full')[0]?>);"></div>
     <div class="title">
       <h2>Updates</h2>
     </div>

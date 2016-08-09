@@ -7985,6 +7985,9 @@ article.full main {
   padding: 16px 24px;
   background-color: #fff;
 }
+article.full main::first-letter {
+  font-size: 2em;
+}
 /*
 === === === === === === ===
 _page_specific
@@ -7993,6 +7996,9 @@ _page_specific
 main section {
   padding-top: 36px;
   padding-bottom: 44px;
+}
+section.about-me p::first-letter {
+  padding-left: 1em;
 }
 section.home-gallery {
   background-color: #4e5b79;

@@ -238,6 +238,9 @@ article.full{
 	main{
 		background-color: #fff;
 		padding: 16px 24px;
+		&::first-letter{
+			font-size: 2em;
+		}
 	}
 }
 /*
@@ -250,6 +253,14 @@ _page_specific
 main section{
 	padding-top: 36px;
 	padding-bottom: 44px;
+}
+
+section.about-me{
+	p{
+		&::first-letter{
+			padding-left: 1em;
+		}
+	}
 }
 
 section.home-gallery{
