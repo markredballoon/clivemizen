@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+  <title><?php wp_title( '-', true, 'right' ); ?></title>
 	<!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,6 @@
     <meta name="google" content="notranslate" />
 
     <!-- Page Title -->
-	<title><?php wp_title( '-', true, 'right' ); ?></title>
 
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -36,6 +35,16 @@
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/style.css?version=1" />
 	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+  
+  <?
+  wp_register_script('jQuery', get_bloginfo('template_url').'/js/jquery-1.11.3.min.js' );
+  wp_register_script( 'bootstrap-scripts', get_bloginfo( 'template_url' ).'/bootstrap/dist/js/bootstrap.min.js', array('jQuery') );
+  wp_register_script( 'custom-scripts', get_bloginfo( 'template_url' ).'/js/custom.js', array('jQuery') );
+
+  wp_enqueue_script('jQuery', 0);
+  wp_enqueue_script('bootstrap-scripts', 1);
+  wp_enqueue_script('custom-scripts', 1);
+  ?>
 
 </head>
 

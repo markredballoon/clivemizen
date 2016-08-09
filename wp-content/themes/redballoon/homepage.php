@@ -38,7 +38,7 @@
 
         <div class="row gallery-images">
           <div class="col-xs-10 col-xs-offset-1">
-            <?=do_shortcode('[awesome-gallery id="26"][/awesome-gallery]')?>
+            <?=apply_filters( 'the_content', _get_project_info( '2', $post->post_content ))?>
           </div>
 
         </div><!--gallery-images-->

@@ -20,17 +20,6 @@
   </section><!-- legal -->
 
 </footer>
-  <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery-1.11.3.min.js"></script>
-  <?
-  wp_register_script('jQuery', get_bloginfo('template_url').'/js/jquery-1.11.3.min.js' );
-  wp_register_script( 'bootstrap-scripts', get_bloginfo( 'template_url' ).'/bootstrap/dist/js/bootstrap.min.js', array('jQuery') );
-  wp_register_script( 'custom-scripts', get_bloginfo( 'template_url' ).'/js/custom.js', array('jQuery') );
-
-  wp_enqueue_script('jQuery')
-  wp_enqueue_script('bootstrap-scripts');
-  wp_enqueue_script('custom-scripts');
-  ?>
-
 <?php wp_footer(); ?>
 </body>
 </html>

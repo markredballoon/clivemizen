@@ -130,6 +130,6 @@ different from the ready function as it waits for all the media on the page to l
 */
 $window.load(function() {
 
-	// console.log('Loaded');
+	console.log('Loaded');
 
 });// Close Load function
