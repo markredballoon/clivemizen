@@ -8058,7 +8058,7 @@ section.links ul {
   margin: 0;
   font-size: 0;
   text-align: center;
-  background-color: #fff;
+  background: #fff;
 }
 .ngg-galleryoverview .ngg-gallery-thumbnail-box {
   position: relative;

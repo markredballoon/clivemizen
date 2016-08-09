@@ -44,7 +44,7 @@
         </div><!--gallery-images-->
 
         <div class="row">
-          <div class="col-xs-11 col-sm-10 col-lg-12">
+          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
             <a href="<?=bloginfo('url')?>/gallery/" class="see-more-white">See More</a>
           </div>
         </div>
