@@ -8022,6 +8022,11 @@ section.home-gallery .asg-image {
   width: 20%;
   vertical-align: top;
 }
+section.links .links-list {
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: #fff;
+}
 section.links ul {
   list-style: disc;
   list-style-position: inside;
