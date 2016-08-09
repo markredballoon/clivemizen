@@ -8050,6 +8050,20 @@ section.links ul {
     text-indent: 24px;
   }
 }
+.home-gallery .slideshowlink {
+  display: none;
+}
+.home-gallery .ngg-gallery-thumbnail {
+  position: relative;
+  display: inline-block;
+  float: none;
+  width: 24%;
+}
+.home-gallery .ngg-gallery-thumbnail img {
+  width: 100%;
+  padding: 0;
+  border: none;
+}
 /*
 === === === === === === ===
 _media_queries
