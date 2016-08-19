@@ -5937,10 +5937,6 @@ img.alignright {
   width: 100%;
   height: auto;
 }
-.size-medium {
-  width: 33%;
-  height: auto;
-}
 .wp-caption img {
   margin: 0;
 }
@@ -6416,6 +6412,7 @@ If the hero height changes at different screen sizes:
 */
 .hero {
   min-height: 400px;
+  max-height: 40vh;
   background-color: #fff;
 }
 .hero.hero-large {

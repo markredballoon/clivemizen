@@ -63,7 +63,7 @@
           <?
   $args = array(
     'post_type' => 'post',
-    'posts_per_page' => 3
+    'posts_per_page' => 5
   );
   $post_query = new WP_Query($args);
   if($post_query->have_posts() ) {
