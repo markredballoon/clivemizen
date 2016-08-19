@@ -7997,9 +7997,6 @@ main section {
   padding-top: 36px;
   padding-bottom: 44px;
 }
-section.about-me p::first-letter {
-  padding-left: 1em;
-}
 section.home-gallery {
   background-color: #4e5b79;
   background-image: url(../../../images/gallery-bg.png);
@@ -8057,6 +8054,9 @@ section.links ul {
     text-align: left;
     text-indent: 24px;
   }
+}
+.home-gallery .ngg-navigation {
+  display: none!important;
 }
 .ngg-galleryoverview {
   padding: 27px 16px 11px;
@@ -8129,6 +8129,7 @@ section.links ul {
 @media screen and (max-width: 460px) {
   .ngg-galleryoverview .ngg-gallery-thumbnail-box {
     width: 100%;
+    margin: 0;
   }
 }
 /*

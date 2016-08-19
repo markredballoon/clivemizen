@@ -255,14 +255,6 @@ main section{
 	padding-bottom: 44px;
 }
 
-section.about-me{
-	p{
-		&::first-letter{
-			padding-left: 1em;
-		}
-	}
-}
-
 section.home-gallery{
 	background-color: @cajm-blue-grey;
 	background-image: url(../../../images/gallery-bg.png);
@@ -293,7 +285,7 @@ section.links{
 	.links-list{
 		background-color: #fff;
 		padding-top: 27px;
-		padding-bottom: 27px; 
+		padding-bottom: 27px;
 	}
 	ul{
 		list-style: disc;
@@ -323,7 +315,9 @@ section.links{
 
 
 // Next Gen Gallery
-
+.home-gallery .ngg-navigation{
+	display: none!important;
+}
 .ngg-galleryoverview{
 	background: #fff;
 	margin: 0;
@@ -382,6 +376,7 @@ section.links{
 	@media screen and (max-width: 460px){
 		.ngg-gallery-thumbnail-box{
 			width: 100%;
+			margin: 0;
 		}
 	}
 }
