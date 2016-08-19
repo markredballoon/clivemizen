@@ -73,7 +73,7 @@
           <article class="in-index-large">
             <header>
               <h3><?=the_title()?></h3>
-              <time date-time="<?=get_the_time('c')?>" class="date"><?=get_the_date( 'M Y' )?></time>
+              <time date-time="<?=get_the_time('c')?>" class="date"><?=get_the_date( 'd M Y' )?></time>
             </header>
             <main>
               <?the_excerpt()?>
@@ -85,7 +85,7 @@
 
         <? } } ?>
 
-          <a href="<?=get_bloginfo('url')?>/updates/" class="see-more-green">See More</a>
+          <a href="<?=get_bloginfo('url')?>/archive/" class="see-more-green">See More</a>
 
         </div>
       </div>

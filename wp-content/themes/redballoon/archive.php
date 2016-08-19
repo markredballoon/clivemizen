@@ -19,7 +19,7 @@
     <article class="in-index-small">
       <header>
         <h3><?=the_title()?></h3>
-        <time date-time="<?the_date( get_option('ISO 8601') )?>" class="date"><?the_date( get_option('M Y') )?></time>
+        <time date-time="<?the_date( get_option('ISO 8601') )?>" class="date"><?the_date( get_option('d M Y') )?></time>
       </header>
       <footer>
         <a href="<?the_permalink()?>" class="button">Read More</a>

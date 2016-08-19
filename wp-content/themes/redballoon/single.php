@@ -11,7 +11,7 @@
           <article class="full">
             <header>
               <h1><?the_title()?></h1>
-              <time date-time="<?=get_the_time('c')?>" class="date"><?=get_the_date( 'M Y' )?></time>
+              <time date-time="<?=get_the_time('c')?>" class="date"><?=get_the_date( 'd M Y' )?></time>
             </header>
             <main>
 							<?the_content()?>

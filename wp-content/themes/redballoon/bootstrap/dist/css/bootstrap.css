@@ -7997,9 +7997,6 @@ main section {
   padding-top: 36px;
   padding-bottom: 44px;
 }
-section.about-me p::first-letter {
-  padding-left: 1em;
-}
 section.home-gallery {
   background-color: #4e5b79;
   background-image: url(../../../images/gallery-bg.png);
