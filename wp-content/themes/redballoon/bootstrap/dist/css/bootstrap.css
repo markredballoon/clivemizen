@@ -6411,7 +6411,7 @@ If the hero height changes at different screen sizes:
 }
 */
 .hero {
-  min-height: 400px;
+  height: 400px;
   max-height: 40vh;
   background-color: #fff;
 }
@@ -8126,7 +8126,8 @@ section.links ul {
 @media screen and (max-width: 460px) {
   .ngg-galleryoverview .ngg-gallery-thumbnail-box {
     width: 100%;
-    margin: 0;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 /*
